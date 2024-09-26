@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Yuji+Syuku&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../all.css">
+    <link rel="stylesheet" href="re.css">
+
+    <link rel="shortcut icon" href="../../img/Time for Fave.png">
+    <title>Register | Time of Fave.</title>
+</head>
+
+<body class="scroll-box_re">
+    <div class="login_form scroll-content_re">
+        <form action="../login/login.html">
+            <div class="logo"><img src="../../img/Time for Fave.png" alt="logo"></div>
+            <div class="text">
+                <input type="text" name="ID" placeholder="　ID">
+                <input type="text" name="pass" placeholder="　パスワード">
+                <input type="text" name="ID" placeholder="　ニックネーム">
+                <div class="icon container">
+
+                    <label>
+                        <input type="radio" name="icon" value="0" checked>
+                        <img src="../../img/I_N.png" alt="nomal">
+                    </label>
+                    <label>
+                        <input type="radio" name="icon" value="1">
+                        <img src="../../img/I_B.png" alt="blue">
+                    </label>
+                    <label>
+                        <input type="radio" name="icon" value="2">
+                        <img src="../../img/I_G.png" alt="green">
+                    </label>
+                    <label>
+                        <input type="radio" name="icon" value="3">
+                        <img src="../../img/I_R.png" alt="red">
+                    </label>
+                    <label>
+                        <input type="radio" name="icon" value="4">
+                        <img src="../../img/I_V.png" alt="violet">
+                    </label>
+                    <label>
+                        <input type="radio" name="icon" value="5">
+                        <img src="../../img/I_Y.png" alt="yello">
+                    </label>
+
+                </div>
+
+                <input type="text" name="pass" placeholder="　手持ち金額">
+                <input type="text" name="ID" placeholder="　最推し">
+            </div>
+            <div class="btn">
+                <button id="modalOpen" type="button" class="in">登録</button>
+                <a class="kyan" href="../login/login.html">キャンセル</a>
+            </div>
+        </form>
+        <br><br>
+    </div>
+    <div id="easyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>本当に登録しますか？</h1>
+            </div>
+            <div class="modal-body">
+                <button id="confirmRe" type="button" class="btn2">登録</button>
+                <button id="cancelRe" type="button" class="btn2">キャンセル</button>
+            </div>
+        </div>
+    </div>
+    <script src="re.js"></script>
+</body>
+
+<footer>
+    <p>© 2024 Time of Fave Inc. All Rights Reserved.</p>
+</footer>
+
+</html>
