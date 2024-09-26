@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.menu {
+    width: 15%;
+    text-align: center;
+    border-right: 1.5px solid #FFFFF3;
+}
+
+.home,
+.shift,
+.work,
+.fave {
+    text-decoration: none;
+}
+
+.home:hover,
+.shift:hover,
+.work:hover,
+.fave:hover {
+    text-decoration: underline;
+}
+
+.menu a:hover {
+    color: #7672ae;
+}
+
+.mypage:hover {
+    text-decoration: none;
+}
+
+.main {
+    width: 85%;
+}
+
+.top-link {
+    margin-top: 5%;
+}
+
+.top-link .list-link {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.top-link .out-link {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 17px;
+    color: #DD1010;
+}
