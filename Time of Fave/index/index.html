@@ -75,7 +75,7 @@
             </div>
             <hr>
             <div class="mypage">
-                <a href="../MypageFinFile/mypage/mypage.html">
+                <a href="../MypageFile/mypage/mypage.html">
                     <h3>MYPAGE</h3>
                 </a>
             </div>
@@ -86,30 +86,36 @@
             <a href="#"><img class="add" src="../img/ADD.png" alt="add"></a>
 
             <div class="scroll-content ge-list">
-                <div class="guzzu">
-                    <div class="container">
-                        <div class="hi-img">
-                            <p>~11/16</p>
-                            <img src="../img/Y_A.png" alt="A">
-                        </div>
-                        <div class="inf-meter">
-                            <div class="container osi-na-pri">
-                                <p class="osi">カンパネルラ</p>
-                                <p class="name">アクリルスタンド</p>
-                                <p class="price">¥1,980</p>
+                <!-- グッズ詳細表示 -->
+                <a class="goods_detail_open" href="#">
+
+                    <div class="guzzu">
+                        <div class="container">
+                            <div class="hi-img">
+                                <p>~11/16</p>
+                                <img src="../img/Y_A.png" alt="A">
                             </div>
-                            <div class="meter-app container">
-                                <div class="meter-container in-meter">
-                                    <!-- 背面のメーター -->
-                                    <meter class="background-meter" value="100" min="0" max="100"></meter>
-                                    <!-- 前面のメーター -->
-                                    <meter class="foreground-meter" value="100" min="0" max="100"></meter>
+                            <div class="inf-meter">
+                                <div class="container osi-na-pri">
+                                    <p class="osi">カンパネルラ</p>
+                                    <p class="name">アクリルスタンド</p>
+                                    <p class="price">¥1,980</p>
                                 </div>
-                                <p class="app">Complete！</p>
+                                <div class="meter-app container">
+                                    <div class="meter-container in-meter">
+                                        <!-- メーター表示 -->
+                                        <meter class="background-meter" value="100" min="0" max="100"></meter>
+                                        <meter class="foreground-meter" value="100" min="0" max="100"></meter>
+                                    </div>
+                                    <p class="app">Complete！</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
+
+
 
                 <div class="event">
                     <div class="container">
@@ -212,11 +218,54 @@
                 </div>
 
             </div>
-
-
-
         </div>
     </div>
+
+    <!-- モーダルウィンドウ -->
+    <div class="detail modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="mohe container">
+                    <div class="yusendo">
+                        <img src="../img/Y_A.png" alt="Y_A">
+                    </div>
+                    <div class="goodsdetail">
+                        <div class="container tate">
+                            <h2 class="komo">日付：</h2>　<h2 class="de">2024/11/16</h2>
+                        </div>
+                        <div class="container tate">
+                            <h2 class="komo">グッズ名：</h2>　<h2 class="de">アクリルスタンド</h2>
+                        </div>
+                        <div class="container tate">
+                            <h2 class="komo">金額(円)：</h2>　<h2 class="de">¥1,980</h2>
+                        </div>
+                        <div class="container tate">
+                            <h2 class="komo">推し：</h2>　<h2 class="de">カンパネルラ</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="memo">
+                    <h2>メモ：</h2>
+                    <p>ビジュがよき</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="edde container">
+                    <a class="edit" href="../GoodsFile/goods_edit/goods_edit.html">
+                        <img src="../img/EDIT2.png" alt="edit2">
+                    </a>
+                    <button type="button" class="delete"><img src="../img/DELE2.png" alt="dele2"></button>
+                </div>
+                <div class="clo">
+                    <button type="button" class="btn close">閉じる</button>
+                </div><br>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+
 </body>
 
 <footer>

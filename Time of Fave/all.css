@@ -213,6 +213,26 @@ body {
     width:10px;
 }
 
+.FAVE .scroll-box::-webkit-scrollbar{
+    background-color: #FFE4E4;
+}
+
+.RELATE .scroll-box::-webkit-scrollbar{
+    background-color: #FFE9C5;
+}
+
+.SHIFT .scroll-box::-webkit-scrollbar{
+    background-color: #CEF7FD;
+}
+
+.WORK .scroll-box::-webkit-scrollbar{
+    background-color: #DAFFCE;
+}
+
+.MYPAGE .scroll-box::-webkit-scrollbar{
+    background-color: #D2D2D2;
+}
+
 .scroll-box::-webkit-scrollbar-thumb {
     background-color: #AAAAAA;
     border-radius: 20px;
