@@ -23,13 +23,13 @@ input[type="text"] {
     color: #66639C;
     font-family: "Noto Serif JP", serif;
     height: 40px;
-    width: 40%;
+    width: 35%;
     padding: 8px;
     margin-bottom: 30px;
     margin: 10px auto;
     display: block;
     border: 0.5px solid #221D7E;
-    border-radius: 5px;
+    border-radius: 3px;
     box-sizing: border-box;
     background-color: #F5F5F5;
 }
@@ -54,7 +54,6 @@ input[type="text"] {
     display: flex;       /* 横並びにする */
     justify-content: center; /* ボタンを中央に配置 */
     gap: 20px;           /* ボタン間に20pxのスペース */
-    margin-top: 40px;    /* ボタンの上に余白を追加 */
 }
 
 /* 削除ボタンのカスタムスタイル */
@@ -65,7 +64,7 @@ input[type="text"] {
     margin-top: 3%;
     color: #221D7E;
     border: 0.5px solid #221D7E;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 5px 40px;
     margin-right: 3%;
     background-color: #FF6666; 
@@ -121,7 +120,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5); /* 背景の半透明黒 */
 }
 
-/* モーダルコンテンツのデザイン（元のまま） */
+/* モーダル全体の中央揃え */
 .modal-content {
     background-color: #DADCFB;
     border: 3px solid #221D7E;
@@ -131,39 +130,48 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 42%;
-    height: 46%; 
+    height: 46%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     padding: 20px;
+    min-width: 500px;
+    text-align: center; /* モーダル全体のテキストを中央寄せ */
 }
 
-/* モーダルヘッダー内の配置を調整 */
+/* モーダルヘッダーのスタイル調整 */
 .modal-header {
-    margin-bottom: 20px; /* 下に余白を追加 */
-    padding-top: 30px; /* 上にも余白を追加 */
-    text-align: center; /* 中央揃え */
+    text-align: center; /* テキストを中央揃え */
+    padding-top: 40px;
+    margin-bottom: 20px;
 }
 
-/* モーダルのテキスト調整 */
+/* モーダルのh3スタイル調整 */
 .modal-header h3 {
-    font-size: 24px;
+    font-size: 28px;
     color: #221D7E;
-    margin-bottom: 10px; /* h3の下に余白を追加 */
+    margin-bottom: 10px;
     font-weight: 800;
+    text-align: center; /* h3も中央寄せ */
 }
 
-.modal-header h4 {
+.modal-header h4,
+.modal-font {
     color: #FE3939;
-    margin-top: 10px; /* h4の上に少し余白を追加 */
+    text-align: left;    /* 左揃え */
+    margin-left: 0;      /* 左マージンをリセット */
+    margin-right: 0;     /* 右マージンもリセット */
+    padding-left: 0;     /* 左の余白もリセット */
+    width: 100%;         /* 幅を100%に設定して、同じ幅に揃える */
+    display: block;      /* ブロック要素にして幅を確保 */
 }
 
-
-/* モーダルのボディ部分（ボタン配置） */
+/* ボタン配置の調整 */
 .modal-body {
     display: flex;
-    justify-content: center;
-    gap: 15px; /* ボタン間のスペース */
+    justify-content: center; /* ボタンを中央に揃える */
+    gap: 15px; /* ボタンの間隔 */
     padding-top: 10px;
 }
+
 
 /* 削除確認ボタン */
 #confirmDelete {
@@ -172,7 +180,7 @@ h2 {
     font-weight: bold;
     margin-top: 3%;
     color: #221D7E;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 5px 40px;
     margin-right: 3%;
     background-color: #FF6666; 
@@ -180,12 +188,23 @@ h2 {
     border: none;
 }
 
+/* 削除ボタンとキャンセルボタン */
+#confirmDelete, #cancelDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 5px 40px;
+    background-color: #FF6666;
+    border-radius: 3px;
+    margin-right: 3%;
+    height: 100%;
+}
+
 #confirmDelete:hover {
     background-color: #ff8787;
 }
 
 /* キャンセルボタン */
-
 #cancelDelete {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
@@ -193,7 +212,7 @@ h2 {
     margin-top: 3%;
     color: #221D7E;
     background-color: #FFFFF3;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 5px 20px;
     text-decoration: none;
     height: 100%;
