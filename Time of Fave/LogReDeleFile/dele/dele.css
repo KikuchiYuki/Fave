@@ -141,7 +141,9 @@ h2 {
 .modal-header {
     text-align: center; /* テキストを中央揃え */
     padding-top: 40px;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    /* margin-bottom: 20px; */
+
 }
 
 /* モーダルのh3スタイル調整 */
@@ -152,16 +154,19 @@ h2 {
     font-weight: 800;
     text-align: center; /* h3も中央寄せ */
 }
-
-.modal-header h4,
-.modal-font {
-    color: #FE3939;
-    text-align: left;    /* 左揃え */
+.modal-h4{
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+}
+.modal-header h4 {
+    color: #FE3939;    
     margin-left: 0;      /* 左マージンをリセット */
     margin-right: 0;     /* 右マージンもリセット */
     padding-left: 0;     /* 左の余白もリセット */
     width: 100%;         /* 幅を100%に設定して、同じ幅に揃える */
     display: block;      /* ブロック要素にして幅を確保 */
+    text-align: left;
 }
 
 /* ボタン配置の調整 */
@@ -169,7 +174,7 @@ h2 {
     display: flex;
     justify-content: center; /* ボタンを中央に揃える */
     gap: 15px; /* ボタンの間隔 */
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 
