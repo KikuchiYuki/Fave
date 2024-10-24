@@ -83,13 +83,69 @@
         </aside>
 
         <div class="main scroll-box">
-            
-            <div class="scroll-content">
-                
+            <div class="head_btn">
+                <a href="#" class="a"><img class="add" src="../../img/ADD.png" alt="add"></a>
+
+                <!-- モーダルを開くためのボタン -->
+                <div class="container_btn">
+                    <button type="button" id="modalOpen" class="btn">一括追加はこちら</button>
+                </div>
+
             </div>
-            
+
+
+
+
+
+            <div class="scroll-content">
+
+            </div>
+
         </div>
     </div>
+
+    <!-- モーダルウィンドウ -->
+    <div id="easyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>シフトの一括追加</h3>
+                <div class="modal-h4">
+                    <h4>※CSVによる一括追加のみ対応しています。</h4>
+                </div>
+            </div>
+
+            <form id="myForm" action="#" method="get">
+                <label for="menu" class="modal_title">バイト先 :</label>
+                <select id="menu" name="menu">
+                    <option value="" disabled selected>バイト先を選択してください</option>
+                    <option value="option1">まいにちマート</option>
+                    <option value="option2">茎わかめファクトリー</option>
+                </select>
+                <br>
+                <!-- カスタムファイル選択ボタン -->
+                <div class="container">
+                    <div class="aaa container">
+                        <div class="modal_title">ファイル : </div>
+                        <label class="custom-file-select" for="fileInput" id="fileLabel">
+                            ファイルを選択してください <!-- プレースホルダー -->
+                        </label>
+                    </div>
+                    <!-- 非表示のファイル選択フィールド -->
+                    <input type="file" id="fileInput" onchange="updateFileName()">
+                    
+                </div>
+
+            </form>
+
+            <div class="modal-body">
+                <!-- モーダル内の削除を確定するボタン -->
+                <button id="confirmDelete" type="button" class="btn">登録</button>
+                <button id="cancelDelete" type="button" class="btn">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="shift.js"></script>
 </body>
 
 <footer>
