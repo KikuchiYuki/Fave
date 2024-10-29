@@ -83,13 +83,106 @@
         </aside>
 
         <div class="main scroll-box">
-            
+            <p class="hissu p">※ ＊は必須項目です。</p>
             <div class="scroll-content">
-                
+                <form class="myform" action="../mypage/mypage.html">
+                    <div class="itemcenter container">
+                        <p><span class="hissu">＊</span>ニックネーム：</p>
+                        <input type="text" name="nick" placeholder="ニックネームを入力してください。" value="ルイ・ルロイ">
+                    </div>
+
+                    <div class="itemcenter container">
+                        <p>最推し：</p>
+                        <select id="mypage-saiosi" name="saiosi">
+                            <option value="" disabled selected>最推しを入力してください</option>
+                            <option value="option1">カンパネルラ</option>
+                            <option value="option2">ミューズ</option>
+                        </select>
+                    </div>
+                    <div class="saiosi">
+                        <img src="../../img/com.jpg" alt="saiosipic">
+                    </div>
+                    
+                    <div class="icon container">
+                        <label>
+                            <input type="radio" name="regimg" value="0" checked>
+                            <img src="../../img/I_N.png" alt="nomal">
+                        </label>
+                        <label>
+                            <input type="radio" name="regimg" value="1">
+                            <img src="../../img/I_B.png" alt="blue">
+                        </label>
+                        <label>
+                            <input type="radio" name="regimg" value="2">
+                            <img src="../../img/I_G.png" alt="green">
+                        </label>
+                        <label>
+                            <input type="radio" name="regimg" value="3">
+                            <img src="../../img/I_R.png" alt="red">
+                        </label>
+                        <label>
+                            <input type="radio" name="regimg" value="4">
+                            <img src="../../img/I_V.png" alt="violet">
+                        </label>
+                        <label>
+                            <input type="radio" name="regimg" value="5">
+                            <img src="../../img/I_Y.png" alt="yello">
+                        </label>
+                    </div>
+
+                    <div class="ma itemcenter container">
+                        <p><span class="hissu">＊</span>達成金額：</p>
+                        <div>
+                            <div class="itemcenter container">
+                                <input id="amo-range" type="text" name="amount" placeholder="達成金額を入力してください。"
+                                    value="9680" oninput="syncRange('amo-range', 'amount-range')">
+                                <button class="mai bu" type="button"
+                                    onclick="adjustAmount(-100, 'amo-range', 'amount-range')">－</button>
+                                <button class="pul bu" type="button"
+                                    onclick="adjustAmount(100, 'amo-range', 'amount-range')">+</button>
+                            </div>
+                            <input type="range" name="amount" value="9680" min="0" max="999999" id="amount-range"
+                                class="amo" oninput="syncInput('amo-range', 'amount-range')" />
+                            <div class="aw container">
+                                <p>0</p>
+                                <p class="me">　</p>
+                                <p>99,999</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itemcenter container">
+                        <p><span class="hissu">＊</span>生活費：</p>
+                        <div>
+                            <div class="itemcenter container">
+                                <input id="exp-range" type="text" name="expense" placeholder="生活費を入力してください。"
+                                    value="118000" oninput="syncRange('exp-range', 'expense-range')">
+                                <button class="mai bu" type="button"
+                                    onclick="adjustAmount(-100, 'exp-range', 'expense-range')">－</button>
+                                <button class="pul bu" type="button"
+                                    onclick="adjustAmount(100, 'exp-range', 'expense-range')">+</button>
+                            </div>
+                            <input type="range" name="expense" value="118000" min="0" max="999999" id="expense-range"
+                                class="expe" oninput="syncInput('exp-range', 'expense-range')" />
+                            <div class="aw container">
+                                <p>0</p>
+                                <p class="me">　</p>
+                                <p>999,999</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <button type="submit" class="in">完了</button>
+                        <a class="kyan" href="../mypage/mypage.html">キャンセル</a>
+                    </div>
+                </form>
             </div>
-            
+
         </div>
     </div>
+
+    <script src="mypage_edit.js"></script>
 </body>
 
 <footer>

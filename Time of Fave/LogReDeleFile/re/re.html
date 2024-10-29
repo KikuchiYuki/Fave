@@ -21,55 +21,88 @@
     <div class="login_form scroll-content_re">
         <form action="../login/login.html">
             <div class="logo"><img src="../../img/Time for Fave.png" alt="logo"></div>
+            <p class="hissu p">※ ＊は必須項目です。</p>
             <div class="text">
-                <input type="text" name="ID" placeholder="　ID">
-                <input type="text" name="pass" placeholder="　パスワード">
-                <input type="text" name="ID" placeholder="　ニックネーム">
-                <div class="icon container">
-
-                    <label>
-                        <input type="radio" name="icon" value="0" checked>
-                        <img src="../../img/I_N.png" alt="nomal">
-                    </label>
-                    <label>
-                        <input type="radio" name="icon" value="1">
-                        <img src="../../img/I_B.png" alt="blue">
-                    </label>
-                    <label>
-                        <input type="radio" name="icon" value="2">
-                        <img src="../../img/I_G.png" alt="green">
-                    </label>
-                    <label>
-                        <input type="radio" name="icon" value="3">
-                        <img src="../../img/I_R.png" alt="red">
-                    </label>
-                    <label>
-                        <input type="radio" name="icon" value="4">
-                        <img src="../../img/I_V.png" alt="violet">
-                    </label>
-                    <label>
-                        <input type="radio" name="icon" value="5">
-                        <img src="../../img/I_Y.png" alt="yello">
-                    </label>
-
-                </div>
-
-                <input type="text" name="pass" placeholder="　手持ち金額">
-                <input type="text" name="ID" placeholder="　最推し">
+                <div class="cen"><input type="text" name="log_id" placeholder="　ID" required="未入力です。"></div>
+                <div class="cen"><input type="text" name="password" placeholder="　パスワード" required="未入力です。"></div>
+                <div class="cen"><input type="text" name="nick" placeholder="　ニックネーム" required="未入力です。"></div>
             </div>
-            <div class="btn">
-                <button id="modalOpen" type="button" class="in">登録</button>
-                <a class="kyan" href="../login/login.html">キャンセル</a>
+            <div class="icon container">
+
+                <label>
+                    <input type="radio" name="regimg" value="0" checked>
+                    <img src="../../img/I_N.png" alt="nomal">
+                </label>
+                <label>
+                    <input type="radio" name="regimg" value="1">
+                    <img src="../../img/I_B.png" alt="blue">
+                </label>
+                <label>
+                    <input type="radio" name="regimg" value="2">
+                    <img src="../../img/I_G.png" alt="green">
+                </label>
+                <label>
+                    <input type="radio" name="regimg" value="3">
+                    <img src="../../img/I_R.png" alt="red">
+                </label>
+                <label>
+                    <input type="radio" name="regimg" value="4">
+                    <img src="../../img/I_V.png" alt="violet">
+                </label>
+                <label>
+                    <input type="radio" name="regimg" value="5">
+                    <img src="../../img/I_Y.png" alt="yello">
+                </label>
+
             </div>
-        </form>
-        <br><br>
+            <br>
+            <input type="text" name="amounthand" placeholder="　所持金額(円)"><br>
+            <input type="text" name="living" placeholder="　生活費(円)"><br>
+            <input type="text" name="saiosi" placeholder="　最推し"><br>
+    </div>
+    <div class="btn">
+        <button id="modalOpen" type="button" class="in">登録</button>
+        <a class="kyan" href="../login/login.html">キャンセル</a>
+    </div>
+    </form>
+    <br><br>
     </div>
     <div id="easyModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h1>本当に登録しますか？</h1>
+                <h1>以下の内容でよろしいですか？</h1>
             </div>
             <div class="modal-body">
+                <table>
+                    <tr>
+                        <th>ID：</th>
+                        <td>1234ruiruroi</td>
+                    </tr>
+                    <tr>
+                        <th>パスワード：</th>
+                        <td>************</td>
+                    </tr>
+                    <tr>
+                        <th>ニックネーム：</th>
+                        <td>ルイ・ルロイ</td>
+                    </tr>
+                    <tr>
+                        <th>アイコン：</th>
+                        <td><img src="../../img/I_N.png" alt="Nomal"></td>
+                    </tr>
+                    <tr>
+                        <th>所持金額(円)：</th>
+                        <td>¥9,680</td>
+                    </tr>
+                    <tr>
+                        <th>生活費(円)：</th>
+                        <td>¥118,000</td>
+                    </tr>
+                    <tr>
+                        <th>最推し：</th>
+                        <td>カンパネルラ</td>
+                    </tr>
+                </table>
                 <button id="confirmRe" type="button" class="btn2">登録</button>
                 <button id="cancelRe" type="button" class="btn2">キャンセル</button>
             </div>
