@@ -13,6 +13,7 @@
     opacity: 0.7;
 }
 
+
 .a {
     display: inline-block;
     /* インライン要素でも幅を指定できるようにする */
@@ -194,7 +195,7 @@ input[type="file"] {
 
 .custom-file-select {
     width: 20.5rem;
-    color: black;
+    color: #A9A8C2;
     margin-left: 6px;
     text-align: left;
     border-radius: 5px;
@@ -233,10 +234,60 @@ select {
     /* 矢印の位置 */
     background-size: 15px;
     /* 矢印のサイズ */
+    color: #A9A8C2;
 }
 
 
 .aaa {
     margin: 0 auto;
     margin-top: 10px;
+}
+
+/*　シフトループ　*/
+.scroll-content{
+    margin: 0;
+    margin-left: 5rem;
+    height: auto;
+}
+.vertical-line {
+    width: 0.5rem; /* 縦棒の幅 */
+    height: 3.6rem; /* 縦棒の高さ */
+    border-radius: 5px;
+    background-color: #A76CE6; /* 縦棒の色 */
+    margin: 10px; /* 余白（オプション） */
+}
+.shift_roop{
+    color: #24063A;
+    margin:0;
+    background-color: #FFFFF3;
+    width:51rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.date{
+    margin: 1rem 1.5rem auto 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.work_name{
+    font-weight: 600;
+    margin: 1.3rem 0 auto 4rem;
+    font-size: 1.5rem;
+}
+.time-container{
+    margin: 0.5rem 4rem auto 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.time{
+    display: block;
+    gap: 5px;
+    font-size: 1.3rem;
+    text-align: right;
+    width: 3rem;
+}
+.img_icon img{
+    margin: 0.7rem 1.6rem auto 0;
+    width: 3.5rem;
+    border-radius: 5px;
 }

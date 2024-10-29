@@ -83,13 +83,83 @@
         </aside>
 
         <div class="main scroll-box">
-            
+
             <div class="scroll-content">
-                
+                <h4>※　＊は必須項目です。</h4>
+                <form action="#" method="post">
+                    <table>
+                        <tr>
+                            <th><span>＊</span> バイト先 :</th>
+                            <td><select id="menu" name="menu">
+                                    <option value="" disabled selected hidden>バイト先を選択してください</option>
+                                    <option value="option1">まいにちマート</option>
+                                    <option value="option2">茎わかめファクトリー</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>＊</span> 開始 :</th>
+                            <td>
+                                <input type="datetime-local" class="pl" placeholder="開始時間を入力してください。">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>＊</span> 終了 :</th>
+                            <td>
+                                <input type="datetime-local" class="pl" placeholder="終了時間を入力してください。">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>＊</span> 休憩 :</th>
+                            <td>
+                                <input type="number" min="0" placeholder="休憩時間を入力してください。">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="zikyu-color"> 時給(円):</th>
+                            <td>
+                                <input type="text" min="0" placeholder="バイト先項目でバイト先を選択してください。" readonly>
+                            </td>
+                            <td>
+                                <button id="modalOpenzikyu" type="button" class="zikyu">時給を変更</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btn">
+                        <button id="modalOpen" type="button" class="in">登録</button>
+                        <a class="kyan" href="#">キャンセル</a>
+                    </div>
+                </form>
+
             </div>
-            
+
         </div>
     </div>
+
+
+    <div id="easyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>本当に登録しますか？</h1>
+            </div>
+            <div class="modal-body">
+                <button id="confirmRe" type="button" class="btn2">登録</button>
+                <button id="cancelRe" type="button" class="btn2">キャンセル</button>
+            </div>
+        </div>
+    </div>
+    <div id="easyModal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>本当に登録しますか？</h1>
+            </div>
+            <div class="modal-body">
+                <button id="confirmRe" type="button" class="btn2">登録</button>
+                <button id="cancelRe" type="button" class="btn2">キャンセル</button>
+            </div>
+        </div>
+    </div>
+    <script src="shift_add.js"></script>
 </body>
 
 <footer>

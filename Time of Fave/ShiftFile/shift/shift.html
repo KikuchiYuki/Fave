@@ -18,7 +18,7 @@
 </head>
 
 <body class="SHIFT">
-    <div class="container con">
+    <div class="container con up">
         <!-- ロゴ -->
         <div class="logo">
             <a href="../../index/index.html"><img src="../../img/Time for Fave.png" alt="logo"></a>
@@ -84,7 +84,7 @@
 
         <div class="main scroll-box">
             <div class="head_btn">
-                <a href="#" class="a"><img class="add" src="../../img/ADD.png" alt="add"></a>
+                <a href="../shift_add/shift_add.html" class="a"><img class="add" src="../../img/ADD.png" alt="add"></a>
 
                 <!-- モーダルを開くためのボタン -->
                 <div class="container_btn">
@@ -95,14 +95,95 @@
 
 
 
-
-
             <div class="scroll-content">
+                <div class="shift_roop">
+                    <div class="container">
+                        <div class="vertical-line"></div>
+                        <span class="date">9/18(水)</span>
+                        <span class="work_name">まいにちマート</span>
+                        <div class="time-container">
+                            <span class="time">9:00</span>
+                            <span class="time">15:00</span>
+                        </div>
+                        <div class="img_icon"><a href="#"><img src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
+                    </div>
+                </div>
 
+                <br>
+
+                <div class="shift_roop">
+                    <div class="container">
+                        <div class="vertical-line"></div>
+                        <span class="date">9/19(木)</span>
+                        <span class="work_name">まいにちマート</span>
+                        <div class="time-container">
+                            <span class="time">12:00</span>
+                            <span class="time">18:00</span>
+                        </div>
+                        <div class="img_icon"><a href="#"><img src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="shift_roop">
+                    <div class="container">
+                        <div class="vertical-line"></div>
+                        <span class="date">9/22(日)</span>
+                        <span class="work_name">まいにちマート</span>
+                        <div class="time-container">
+                            <span class="time">10:00</span>
+                            <span class="time">18:00</span>
+                        </div>
+                        <div class="img_icon"><a href="#"><img src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
+                    </div>
+                </div>
+                
+                <br>
+
+                <div class="shift_roop">
+                    <div class="container">
+                        <div class="vertical-line"></div>
+                        <span class="date">9/24(火)</span>
+                        <span class="work_name">まいにちマート</span>
+                        <div class="time-container">
+                            <span class="time">9:00</span>
+                            <span class="time">15:00</span>
+                        </div>
+                        <div class="img_icon"><a href="#"><img src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
+                    </div>
+                </div>
             </div>
+
+
 
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- モーダルウィンドウ -->
     <div id="easyModal" class="modal">
@@ -117,7 +198,7 @@
             <form id="myForm" action="#" method="get">
                 <label for="menu" class="modal_title">バイト先 :</label>
                 <select id="menu" name="menu">
-                    <option value="" disabled selected>バイト先を選択してください</option>
+                    <option value="" disabled selected hidden>バイト先を選択してください</option>
                     <option value="option1">まいにちマート</option>
                     <option value="option2">茎わかめファクトリー</option>
                 </select>
@@ -132,7 +213,7 @@
                     </div>
                     <!-- 非表示のファイル選択フィールド -->
                     <input type="file" id="fileInput" onchange="updateFileName()">
-                    
+
                 </div>
 
             </form>
