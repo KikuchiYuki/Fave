@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Yuji+Syuku&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="../../all.css">
     <link rel="stylesheet" href="goods_add.css">
-
     <link rel="shortcut icon" href="../../img/Time for Fave.png">
-    <title>Goods_Add | Time of Fave.</title>
+    <title>FAVE_Add | Time of Fave.</title>
 </head>
 
-<body class="MYPAGE>
+<body class="MYPAGE">
     <div class="container con">
         <!-- ロゴ -->
         <div class="logo">
@@ -29,9 +26,7 @@
             <br>
             <h2>≪METER≫</h2>
             <div class="meter-container">
-                <!-- 背面のメーター -->
                 <meter class="background-meter" value="31.1" min="0" max="100"></meter>
-                <!-- 前面のメーター -->
                 <meter class="foreground-meter" value="9.7" min="0" max="100"></meter>
             </div>
             <div class="meterimg">
@@ -41,59 +36,128 @@
         </div>
     </div>
     <br>
+
     <div class="maincontents container">
         <aside class="menu">
             <br>
-            <div class="home">
-                <a href="../../index/index.html">
+            <div class="home"><a href="../../index/index.html">
                     <h3>HOME</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="fave">
-                <a href="../../FaveFile/fave/fave.html">
+            <div class="fave"><a href="../../FaveFile/fave/fave.html">
                     <h3>FAVE</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="relate">
-                <a href="../../FaveFile/relate/relate.html">
+            <div class="relate"><a href="../../FaveFile/relate/relate.html">
                     <h3>RELATE</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="shift">
-                <a href="../../ShiftFile/shift/shift.html">
+            <div class="shift"><a href="../../ShiftFile/shift/shift.html">
                     <h3>SHIFT</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="work">
-                <a href="../../WorkFile/work/work.html">
+            <div class="work"><a href="../../WorkFile/work/work.html">
                     <h3>WORK</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="mypage">
-                <a href="../../MypageFile/mypage/mypage.html">
+            <div class="mypage"><a href="../../MypageFile/mypage/mypage.html">
                     <h3>MYPAGE</h3>
-                </a>
-            </div>
+                </a></div>
             <br><br>
         </aside>
-        
         <div class="main scroll-box">
-            
-            <div class="scroll-content">
-                
-            </div>
-            
+            <form action="../goods/goods.html">
+                <div class="toggle-container">
+                    <label for="switch" class="switch_label">
+                        <div class="switch">
+                            <input type="checkbox" id="switch" />
+                            <div class="base">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <span class="title">グッズ</span>
+                    </label>
+                    <p class="note">※ ＊は必須項目です。</p>
+                </div>
+                <br><br>
+                <div class="group">
+                    <div class="form-group">
+                        <label for="date"><span class="req">＊</span> 日付：</label>
+                        <input type="date" class="date" name="date" placeholder="日付を選んでください。" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goods_name"><span class="req">＊</span> グッズ名：</label>
+                        <input type="text" class="goods_name" name="goods_name" placeholder="グッズの名前を入力してください。" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount"><span class="req">＊</span> 金額(円)：</label>
+                        <input type="text" class="amount" name="amount" placeholder="グッズの金額を入力してください。" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="favo" for="favorite"><span class="req">＊</span> 推し：</label>
+                        <input type="text" class="favorite" name="favorite" placeholder="推しを選択してください。">
+                        <div class="btn-plus">
+                            <button class="plus" type="button">
+                                <img src="../../img/plus.png" alt="plus">
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="icon container">
+                            <label>
+                                <input type="radio" name="icon" value="0" checked>
+                                <img src="../../img/Y_A.png" alt="a">
+                            </label>
+                            <label>
+                                <input type="radio" name="icon" value="1">
+                                <img src="../../img/Y_B.png" alt="b">
+                            </label>
+                            <label>
+                                <input type="radio" name="icon" value="2">
+                                <img src="../../img/Y_C.png" alt="c">
+                            </label>
+                            <label>
+                                <input type="radio" name="icon" value="3">
+                                <img src="../../img/Y_D.png" alt="d">
+                            </label>
+                            <label>
+                                <input type="radio" name="icon" value="4">
+                                <img src="../../img/Y_E.png" alt="e">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memo" class="memo-label">メモ：</label>
+                        <textarea class="memo" name="memo" placeholder="メモを入力してください。"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="check">購入済：</label>
+                        <input type="checkbox" class="purchased" name="purchased"><span
+                            class="small-text">※購入済みの場合はチェックを入れてください。</span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="btn">
+                            <button id="modalOpen" type="button" class="in">追加</button>
+                            <a class="kyan" href="../../MypageFile/mypage/mypage.html">キャンセル</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</body>
 
-<footer>
-    <p>© 2024 Time of Fave Inc. All Rights Reserved.</p>
-</footer>
+    <script src="goods_add.js"></script>
+    <footer>
+        <p>© 2024 Time of Fave Inc. All Rights Reserved.</p>
+    </footer>
+</body>
 
 </html>
