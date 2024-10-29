@@ -8,6 +8,18 @@ form {
     margin: 0 auto;
 }
 
+.hissu {
+    color: #FF1212;
+    font-weight: bold;
+}
+
+.p {
+    text-align: right;
+    font-weight: bold;
+    margin-right: 30%;
+}
+
+
 .logo img {
     width: 100%;
 }
@@ -17,10 +29,11 @@ form {
     margin-top: 2%;
 }
 
+
+
 input[type="text"] {
-    font-weight: bold;
     font-size: 20px;
-    color: #66639C;
+    color: #221D7E;
     font-family: "Noto Serif JP", serif;
     height: 40px;
     width: 40%;
@@ -29,8 +42,9 @@ input[type="text"] {
     border: 0.5px solid #221D7E;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #F5F5F5;
+    background-color: #FFFFF3;
     margin: 1% auto;
+    display: inline;
 }
 
 .text .a {
@@ -47,6 +61,18 @@ input[type="text"] {
 .text .a a:hover {
     color: #5d94f3;
     text-decoration: none;
+}
+
+.text input[type="text"] {
+    width: 37%;
+}
+
+.text .cen::before {
+    content: "＊";
+    color: #FF1212;
+    margin-right: 1%;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .icon {
@@ -74,8 +100,11 @@ input[type=radio]{
     display: none;
 }
 
+
+
 .btn {
     text-align: center;
+    margin-top: 10%;
 }
 
 .in {
@@ -162,18 +191,17 @@ footer {
     transform: translate(-50%, -50%);
     margin: auto;
     width: 50%;
-    height: 50%;
+    height: 80%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
 }
 
 .modal-header h1 {
     color: #221D7E;
-    margin-top: 5%;
     font-weight: bolder;
 }
 
 .modal-header {
-    margin: 50px 40px 40px;
+    margin: 40px;
     display: flex;
     justify-content: center;
 }
@@ -183,10 +211,35 @@ footer {
 }
 
 .modal-body {
-    padding: 10px 20px;
+    padding: 0 20px;
     text-align: center;
 }
 
+.modal-body table img {
+    width: 20%;
+    border-radius: 100%;
+}
+
+.modal-body table  {
+    width: 95%;
+    margin: 0 auto;
+    border-spacing: 10px;
+    font-size: 18px;
+}
+
+.modal-body table th {
+    width: 45%;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 2px;
+}
+
+.modal-body table td {
+    width: 55%;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 4px;
+}
 
 
 #confirmRe {
