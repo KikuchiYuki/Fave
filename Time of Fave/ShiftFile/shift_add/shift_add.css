@@ -13,7 +13,7 @@
     opacity: 0.7;
 }
 
-.scroll-content{
+.scroll-content {
     width: 80% !important;
     margin: 0;
     margin-left: 5rem;
@@ -23,15 +23,10 @@
 
 .a {
     display: inline-block;
-    /* インライン要素でも幅を指定できるようにする */
     width: 26%;
-    /* 必要に応じて幅を調整（例：100px） */
     height: auto;
-    /* 画像の縦横比を維持するためにautoを指定 */
     padding: 0;
-    /* 余計なパディングがないか確認 */
     margin: 0;
-    /* 必要に応じてマージンを調整 */
 }
 
 .head_btn {
@@ -79,42 +74,51 @@
 /* モーダルヘッダーのスタイル調整 */
 .modal-header {
     text-align: center;
-    /* テキストを中央揃え */
     padding-top: 40px;
-    margin: 0 auto;
-    /* margin-bottom: 20px; */
-
-}
-
-/* モーダルのh3スタイル調整 */
-.modal-header h3 {
-    font-size: 28px;
-    color: #221D7E;
-    margin-bottom: 10px;
-    font-weight: 800;
-    text-align: center;
-    /* h3も中央寄せ */
-}
-
-.modal-h4 {
-    display: inline-block;
-    text-align: left;
     margin: 0 auto;
 }
 
 .modal-header h4 {
-    color: #FE3939;
-    margin-left: 0;
-    /* 左マージンをリセット */
-    margin-right: 0;
-    /* 右マージンもリセット */
-    padding-left: 0;
-    /* 左の余白もリセット */
-    width: 100%;
-    /* 幅を100%に設定して、同じ幅に揃える */
+    font-size: 1.3rem;
+    margin: 20px 0;
+    text-align: center;
+}
+.modal-header span{
+    color: #221D7E;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#easyModal2 input[type="number"] {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 900;
+    color: #221D7E;
+    font-family: "Noto Serif JP", serif;
+    height: 40px;
+    width: 16rem !important;
+    padding: 8px;
+    margin-right: 8px;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #FFFFF3;
+}
+#easyModal2 input[type="radio"] {
+    color: #221D7E;
+    font-family: "Noto Serif JP", serif;
+    height: 10px;
+    padding: 8px;
+    margin-right: 8px;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #FFFFF3;
+}
+.radio{
     display: block;
-    /* ブロック要素にして幅を確保 */
-    text-align: left;
+    margin: auto;
+    align-items: center;
 }
 
 /* ボタン配置の調整 */
@@ -184,7 +188,7 @@ form {
 }
 
 input[type="datetime-local"] {
-    font-size: 20px;
+    font-size: 18px;
     color: #A9A8C2;
     font-family: "Noto Serif JP", serif;
     height: 40px;
@@ -197,7 +201,7 @@ input[type="datetime-local"] {
 }
 
 input[type="text"] {
-    font-size: 20px;
+    font-size: 18px;
     color: #A9A8C2;
     font-family: "Noto Serif JP", serif;
     height: 40px;
@@ -208,12 +212,16 @@ input[type="text"] {
     box-sizing: border-box;
     background-color: #FFFFF3;
 }
+
 input[type="text"]::placeholder {
-    color: #A9A8C2; /* プレースホルダの色 */
-    opacity: 1;     /* プレースホルダの透明度（デフォルトで薄く表示されるため） */
+    color: #A9A8C2;
+    /* プレースホルダの色 */
+    opacity: 1;
+    /* プレースホルダの透明度（デフォルトで薄く表示されるため） */
 }
+
 input[type="number"] {
-    font-size: 20px;
+    font-size: 18px;
     color: #A9A8C2;
     font-family: "Noto Serif JP", serif;
     height: 40px;
@@ -224,9 +232,12 @@ input[type="number"] {
     box-sizing: border-box;
     background-color: #FFFFF3;
 }
+
 input[type="number"]::placeholder {
-    color: #A9A8C2; /* プレースホルダの色 */
-    opacity: 1;     /* プレースホルダの透明度（デフォルトで薄く表示されるため） */
+    color: #A9A8C2;
+    /* プレースホルダの色 */
+    opacity: 1;
+    /* プレースホルダの透明度（デフォルトで薄く表示されるため） */
 }
 
 option {
@@ -242,7 +253,7 @@ select {
     font-family: "Noto Serif JP", serif;
     padding: 5px;
     padding-left: 8px;
-    font-size: 20px;
+    font-size: 18px;
     border: #221D7E 0.5px solid;
     border-radius: 5px;
     background-image: url('../../img/DOWN.png');
@@ -263,35 +274,49 @@ select {
 }
 
 /* formのtable */
-h4{
+form h4 {
     font-size: 1.3rem;
     text-align: right;
     color: #FF1212;
 }
-span{
+
+span {
     color: #FF1212;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.hissu {
+    text-align: right;
+    color: #FF1212;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 table {
-    writing-mode: horizontal-tb; /* 横書きに設定 */
-    text-orientation: mixed;     /* 文字の方向も標準に */
+    writing-mode: horizontal-tb;
+    /* 横書きに設定 */
+    text-orientation: mixed;
+    /* 文字の方向も標準に */
     margin-top: 2rem;
     margin-left: 1rem;
 }
 
-th{
+th {
     text-align: right;
     font-size: 20px;
-    width: 13rem;
+    width: auto
 }
-td{
+
+td {
     padding: 1rem;
     padding-left: 3rem;
 }
 
-.pl{
+.pl {
     position: relative;
 }
+
 .pl::before {
     content: attr(placeholder);
     position: absolute;
@@ -302,23 +327,33 @@ td{
     display: none;
 }
 
-.zikyu-color{
+.zikyu-color {
     color: #5A56A4;
 }
+
 .zikyu {
     font-family: "Noto Serif JP", serif;
     font-weight: bold;
-    writing-mode: horizontal-tb; /* 横書きに設定 */
-    text-orientation: mixed;     /* 文字の方向も標準に */
-    width: 7.5rem;   
-    padding: 0 10px;             /* ボタンの幅を調整 */
-    height: 40px;                /* ボタンの高さを調整 */
-    font-size: 19px;             /* フォントサイズを調整 */
-    display: inline-block;       /* ブロック要素にしてサイズを指定 */
+    writing-mode: horizontal-tb;
+    /* 横書きに設定 */
+    text-orientation: mixed;
+    /* 文字の方向も標準に */
+    width: 7.5rem;
+    padding: 0 10px;
+    /* ボタンの幅を調整 */
+    height: 40px;
+    /* ボタンの高さを調整 */
+    font-size: 19px;
+    /* フォントサイズを調整 */
+    display: inline-block;
+    /* ブロック要素にしてサイズを指定 */
     border: 1px solid #221D7E;
-    background-color: #C3F8B9;  /* 背景色 */
-    color: #221D7E;                /* 文字色 */
-    border-radius: 5px;         /* 角を丸くする */
+    background-color: #C3F8B9;
+    /* 背景色 */
+    color: #221D7E;
+    /* 文字色 */
+    border-radius: 5px;
+    /* 角を丸くする */
 }
 
 .zikyu:hover {

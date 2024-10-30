@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Yuji+Syuku&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="../../all.css">
     <link rel="stylesheet" href="shift_add.css">
-
     <link rel="shortcut icon" href="../../img/Time for Fave.png">
     <title>SHIFT_Add | Time of Fave.</title>
 </head>
@@ -29,9 +26,7 @@
             <br>
             <h2>≪METER≫</h2>
             <div class="meter-container">
-                <!-- 背面のメーター -->
                 <meter class="background-meter" value="31.1" min="0" max="100"></meter>
-                <!-- 前面のメーター -->
                 <meter class="foreground-meter" value="9.7" min="0" max="100"></meter>
             </div>
             <div class="meterimg">
@@ -44,48 +39,35 @@
     <div class="maincontents container">
         <aside class="menu">
             <br>
-            <div class="home">
-                <a href="../../index/index.html">
+            <div class="home"><a href="../../index/index.html">
                     <h3>HOME</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="fave">
-                <a href="../../FaveFile/fave/fave.html">
+            <div class="fave"><a href="../../FaveFile/fave/fave.html">
                     <h3>FAVE</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="relate">
-                <a href="../../FaveFile/relate/relate.html">
+            <div class="relate"><a href="../../FaveFile/relate/relate.html">
                     <h3>RELATE</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="shift">
-                <a href="../../ShiftFile/shift/shift.html">
+            <div class="shift"><a href="../../ShiftFile/shift/shift.html">
                     <h3>SHIFT</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="work">
-                <a href="../../WorkFile/work/work.html">
+            <div class="work"><a href="../../WorkFile/work/work.html">
                     <h3>WORK</h3>
-                </a>
-            </div>
+                </a></div>
             <hr>
-            <div class="mypage">
-                <a href="../../MypageFile/mypage/mypage.html">
+            <div class="mypage"><a href="../../MypageFile/mypage/mypage.html">
                     <h3>MYPAGE</h3>
-                </a>
-            </div>
+                </a></div>
             <br><br>
         </aside>
 
         <div class="main scroll-box">
-
             <div class="scroll-content">
-                <h4>※　＊は必須項目です。</h4>
+                <p class="hissu p">※ ＊は必須項目です。</p>
                 <form action="#" method="post">
                     <table>
                         <tr>
@@ -112,11 +94,11 @@
                         <tr>
                             <th><span>＊</span> 休憩 :</th>
                             <td>
-                                <input type="number" min="0" placeholder="休憩時間を入力してください。">
+                                <input type="number" min="0" placeholder="休憩時間(分)を入力してください。">
                             </td>
                         </tr>
                         <tr>
-                            <th class="zikyu-color"> 時給(円):</th>
+                            <th class="zikyu-color"> 時給(円) :</th>
                             <td>
                                 <input type="text" min="0" placeholder="バイト先項目でバイト先を選択してください。" readonly>
                             </td>
@@ -127,15 +109,12 @@
                     </table>
                     <div class="btn">
                         <button id="modalOpen" type="button" class="in">登録</button>
-                        <a class="kyan" href="#">キャンセル</a>
+                        <a class="kyan" href="../shift/shift.html">キャンセル</a>
                     </div>
                 </form>
-
             </div>
-
         </div>
     </div>
-
 
     <div id="easyModal" class="modal">
         <div class="modal-content">
@@ -148,17 +127,29 @@
             </div>
         </div>
     </div>
+
     <div id="easyModal2" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h1>本当に登録しますか？</h1>
+                <h1>時給の変更</h1>
+                <h4>バイト先 : まいにちマート</h4>
+                <input type="number" class="modal-input" value="900" readonly><span>円</span><br>
+
+                <div class="radio container">
+                    <input type="radio" name="zikyu-change" value="0">
+                    今回のシフトだけ変更
+                    <br>
+                    <input type="radio" name="zikyu-change" value="1">
+                    今回以降のシフトの日付と、<br>バイト先情報の時給も変更
+                </div>
             </div>
             <div class="modal-body">
-                <button id="confirmRe" type="button" class="btn2">登録</button>
-                <button id="cancelRe" type="button" class="btn2">キャンセル</button>
+                <button id="confirmRe2" type="button" class="btn2">登録</button>
+                <button id="cancelRe2" type="button" class="btn2">キャンセル</button> <!-- IDを変更 -->
             </div>
         </div>
     </div>
+
     <script src="shift_add.js"></script>
 </body>
 
