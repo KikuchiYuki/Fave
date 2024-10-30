@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 .main {
-    width: 85%;
+    margin-left: 20%;
+    width: 90%;
+    overflow-x: hidden;
 }
 
 .main .add {
@@ -12,6 +14,14 @@
 .main .add:hover {
     opacity: 0.7;
 }
+
+.scroll-box {
+    overflow: auto; /* スクロール可能にする */
+    margin-top: 2.1%;
+    width: 50%;
+    max-height: 80vh; /* 最大高さを80vhに設定（画面の80%の高さ） */
+}
+
 
 .ge-list {
     width: 70%;
@@ -51,6 +61,20 @@
     top:-71px;
 }
 
+.right-side .guzzu-right {
+    margin-top: 20px; /* コンテンツとヘッダーの距離を広げる */
+    padding: 10px;
+    border: solid;
+    border-color: #FFFFF3;
+    border-radius: 8px;
+    margin-bottom: 3%;
+    max-width: 400px; /* 箱の幅を小さく設定 */
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    top:-21px;
+}
+
 .event {
     background-color: #FFFFD1;
     padding: 10px;
@@ -61,6 +85,21 @@
     margin-right: auto;
     position:relative;
     top:-71px;
+}
+
+.event-right {
+    background-color: #FFFFD1;
+    border: 1px solid;
+    border-color: #FFFFF3;
+    opacity: 0.2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 3%;
+    max-width: 400px; /* 箱の幅を小さく設定 */
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    top:-21px;
 }
 
 .event .hi-img,
@@ -74,7 +113,15 @@
     border-radius: 50%; /* アイコンを丸くする */
 }
 
+.guzzu-right .hi-img-right img {
+    border-radius: 50%; /* アイコンを丸くする */
+}
+
 .event .hi-img img {
+    border-radius: 50%; /* アイコンを丸くする */
+}
+
+.event-right .hi-img-right img {
     border-radius: 50%; /* アイコンを丸くする */
 }
 
@@ -83,6 +130,14 @@
 }
 
 .event .hi-img p {
+    display: none;
+}
+
+.guzzu-right .hi-img-right p {
+    display: none;
+}
+
+.event-right .hi-img-right p {
     display: none;
 }
 
@@ -116,7 +171,7 @@
     left: 0;
     right: 0;
     height: 1px; /* 線の太さ */
-    background-color: #BA9BDC; /* 線の色 */
+    background-color: #D2D2D2; /* 線の色 */
     z-index: 1; /* 文字の下に表示 */
 }
 
@@ -172,18 +227,20 @@
     opacity: 0.7;
 }
 
+/* 右側のsplit-containerの要素を垂直に揃えるためにflexboxを使用 */
 .split-container {
     display: flex;
+    align-items: flex-start; /* 上に揃っているので修正 */
+    justify-content: space-between; /* 左右にスペースを取る */
 }
 
 .left-side {
-    width: 50%;
+    width: 100%;
     padding-right: 20px;
-    border-right: 1px solid black; /* 縦線を表示 */
 }
 
 .right-side {
-    width: 50%;
+    width: 100%;
     padding-left: 20px;
 }
 
@@ -234,6 +291,10 @@
     width: 60px; /* アイコンのサイズを調整 */
 }
 
+.hi-img-right img {
+    width: 60px; /* アイコンのサイズを調整 */
+}
+
 .meterimg .temoti {
     margin-left: 51.3%;
 }
@@ -251,12 +312,13 @@
 
 .purchase-text {
     color: #C80C0C;
+    font-weight: bold;
     font-size: 10px; /* フォントサイズを調整 */
     margin-right: auto; /* 自動で右側のマージンを設定 */
     text-align: center; /* 中央揃え */
     position:relative;
-    top:-56px;
-    margin-left: 28px;
+    top:-59px;
+    margin-left: 40px;
 }
 
 .add-icon {
@@ -264,8 +326,86 @@
     height: auto; /* 高さを自動で設定 */
     position:relative;
     top: -56px;
+    right: 26px;
 }
 
-.right-side .guzzu .add-icon {
-    display: none;
+/* 右側のadd-iconを非表示にしつつ、レイアウトを維持する */
+.right-add-icon {
+    display: none; /* 右側のADDアイコンを非表示にする */
+}
+
+/* 右側のstatus-container内の要素を右揃えにする */
+.right-side .status-container {
+    color: #C80C0C;
+    font-weight: bold;
+    font-size: 10px; /* フォントサイズを調整 */
+    margin-right: auto; /* 自動で右側のマージンを設定 */
+    text-align: center; /* 中央揃え */
+    position:relative;
+    top:-32px;
+    margin-left: 40px;
+
+}
+
+.add-button {
+    background: none; /* 背景を消す */
+    border: none; /* ボーダーを消す */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* モーダルの基本スタイル */
+.modal {
+    display: none; /* 初期は非表示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* 背景の半透明 */
+}
+
+/* モーダルのコンテンツ */
+.modal-content {
+    background-color: #DADCFB;
+    border: 3px solid #221D7E;
+    border-radius: 3.5px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42%;
+    height: 55%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    min-width: 500px;
+    text-align: center; 
+    font-size: 20px;
+}
+
+#modalClose {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bolder;
+    margin-top: 20%;
+    color: #221D7E;
+    background-color: #FFFFF3;
+    border-radius: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: none;
+}
+
+#modalClose:hover {
+    background-color: #ececec;
+}
+
+.modal-image {
+    width: 100px; /* 必要に応じてサイズを調整 */
+    height: 100px; /* 必要に応じてサイズを調整 */
+    border-radius: 50%; /* 丸い形にする */
+    float: left; /* 左寄せにする */
+    margin-right: 10px; /* 画像とテキストの間にスペースを追加 */
 }
