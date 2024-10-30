@@ -80,304 +80,348 @@
             <br><br>
         </aside>
 
-        <div class="main scroll-box">
-            <div class="split-container">
-                <!-- 左側のカンパネルラ商品リスト -->
-                <div class="left-side">
-                    <p class="status">PENDING</p>
+        <div class="main container">
+            <div class="scroll-box">
+                <div class="split-container">
+                    <!-- 左側のカンパネルラ商品リスト -->
+                    <div class="left-side">
+                        <p class="status">PENDING</p>
 
-                    <!-- ステータスコンテナ -->
-                    <div class="status-container">
-                        <span class="purchase-text">
-                            <span>購入したら</span><br>
-                            <span>クリック</span>
-                        </span>
-                        <img src="../../img/ADD.png" alt="ADD" class="add-icon">
-                    </div>
-
-                    <!-- guzuu や event を左側に配置 -->
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/Y_A.png" alt="A">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">アクリルスタンド</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥1,980</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
+                        <!-- ステータスコンテナ -->
+                        <div class="status-container">
+                            <span class="purchase-text">
+                                <span>購入したら</span><br>
+                                <span>クリック</span>
+                            </span>
+                            <a href="../goods_add/goods_add.html">
+                                <img src="../../img/ADD.png" alt="ADD" class="add-icon">
+                            </a>
                         </div>
-                    </div>
 
-                    <div class="event">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/27</p>
-                                <img src="../../img/Y_B.png" alt="B">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">ミューズ</p>
-                                        <hr class="divider">
-                                        <p class="name">STARMINE ver.4.0</p>
-                                    </div>
+
+                        <!-- カンパネルラ アクリルスタンドの商品ボックス -->
+                        <div class="guzzu">
+                            <div class="container" id="item1"
+                                onclick="openModal('item1', 'グッズ：　アクリルスタンド<br> 金額(円)：　￥1,980<br> 推し：　カンパネルラ<br>  日付：　2024/11/16<br>', )">
+                                <div class="hi-img">
+                                    <p>~11/16</p>
+                                    <img src="../../img/Y_A.png" alt="A" onclick="moveToPurchased(event, 'item1')">
                                 </div>
-                                <p class="price">¥12,500</p>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">アクリルスタンド</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥1,980</p>
+                                </div>
                                 <div class="meter-app container">
-                                    <p class="app">Expected…</p>
+                                    <p class="app">Complete！</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/Y_C.png" alt="C">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">ミューズ</p>
-                                        <hr class="divider">
-                                        <p class="name">ころころぬい　ランダム</p>
+                        <div class="event">
+                            <div class="container" id="item2"
+                                onclick="openModal('item2', 'グッズ：　STARMINE ver.4.0<br> 金額(円)：　￥12,500<br> 推し：　ミューズ<br> 日付：　2024/11/27<br>',)">
+                                <div class="hi-img">
+                                    <p>~11/27</p>
+                                    <img src="../../img/Y_B.png" alt="B" onclick="moveToPurchased(event, 'item2')">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">ミューズ</p>
+                                            <hr class="divider">
+                                            <p class="name">STARMINE ver.4.0</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥12,500</p>
+                                    <div class="meter-app container">
+                                        <p class="app">Expected…</p>
                                     </div>
                                 </div>
-                                <p class="price">¥1,960</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/Y_D.png" alt="D">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">銀河鉄道模型　受…</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥21,300</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="event">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~2/18</p>
-                                <img src="../../img/Y_E.png" alt="E">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">ミューズ</p>
-                                        <hr class="divider">
-                                        <p class="name">STARLIVEツアー…</p>
-                                    </div>
+                        <div class="guzzu">
+                            <div class="container" id="item3"
+                                onclick="openModal('item3', 'ミューズ ころころぬい ランダム', '¥1,960')">
+                                <div class="hi-img">
+                                    <p>~11/16</p>
+                                    <img src="../../img/Y_C.png" alt="C" onclick="moveToPurchased(event, 'item3')">
                                 </div>
-                                <p class="price">¥62,000</p>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">ミューズ</p>
+                                            <hr class="divider">
+                                            <p class="name">ころころぬい ランダム</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥1,960</p>
+                                </div>
                                 <div class="meter-app container">
-                                    <p class="app">Expected…</p>
+                                    <p class="app">Complete！</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- 右側のカンパネルラ商品リスト -->
-                <div class="right-side">
-                    <p class="status">BOUHT</p>
-
-                    <!-- ステータスコンテナ -->
-                    <div class="status-container">
-                        <span class="purchase-text">
-                            <span>購入したら</span><br>
-                            <span>クリック</span>
-                        </span>
-                        <img src="../../img/ADD.png" alt="ADD" class="add-icon">
-                    </div>
-
-                    <!-- guzuu や event を右側に配置 -->
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="H">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">アクリルパネル</p>
-                                    </div>
+                        <div class="guzzu">
+                            <div class="container" id="item4" onclick="openModal('item4', 'カンパネルラ 銀河鉄道模型', '¥21,300')">
+                                <div class="hi-img">
+                                    <p>~11/16</p>
+                                    <img src="../../img/Y_D.png" alt="D" onclick="moveToPurchased(event, 'item4')">
                                 </div>
-                                <p class="price">¥2,600</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">銀河鉄道模型</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥21,300</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="I">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">ミューズ</p>
-                                        <hr class="divider">
-                                        <p class="name">ネップリ　第2弾</p>
+                        <div class="event">
+                            <div class="container">
+                                <div class="hi-img">
+                                    <p>~2/18</p>
+                                    <img src="../../img/Y_E.png" alt="E">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">ミューズ</p>
+                                            <hr class="divider">
+                                            <p class="name">STARLIVEツアー…</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥62,000</p>
+                                    <div class="meter-app container">
+                                        <p class="app">Expected…</p>
                                     </div>
                                 </div>
-                                <p class="price">¥4,000</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="J">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">もちころりん　先…</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥2,500</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="K">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">劇場版　始まりの…</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥11,300</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="L">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">ミューズ</p>
-                                        <hr class="divider">
-                                        <p class="name">STARMINE ver.1.0</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥9,500</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="M">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">夏の日の思い出 ド…</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥3,200</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="guzzu">
-                        <div class="container">
-                            <div class="hi-img">
-                                <p>~11/16</p>
-                                <img src="../../img/購入済.png" alt="N">
-                            </div>
-                            <div class="inf-meter">
-                                <div class="name-container">
-                                    <div class="name-divider">
-                                        <p class="osi">カンパネルラ</p>
-                                        <hr class="divider">
-                                        <p class="name">劇場版　始まりの…</p>
-                                    </div>
-                                </div>
-                                <p class="price">¥2,000</p>
-                            </div>
-                            <div class="meter-app container">
-                                <p class="app">Complete！</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <div class="scroll-box">
+                <div class="split-container">
+                    <!-- 右側のカンパネルラ商品リスト -->
+                    <div class="right-side">
+                        <p class="status">BOUHT</p>
+
+                        <!-- ステータスコンテナ -->
+                        <div class="status-container">
+                            <span class="purchase-text-1">
+                                <span>未購入なら</span><br>
+                                <span>クリック</span>
+                            </span>
+                        </div>
+                        </span>
+                        <!-- 右側のADDアイコンに専用クラスを追加 -->
+                        <img src="../../img/ADD.png" alt="ADD" class="right-add-icon">
+
+
+                        <!-- guzuu や event を右側に配置 -->
+                        <div class="guzzu-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="H">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">アクリルパネル</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥2,600</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="event-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="I">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">ミューズ</p>
+                                            <hr class="divider">
+                                            <p class="name">ネップリ　第2弾</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥4,000</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guzzu-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="J">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">もちころりん　先…</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥2,500</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guzzu-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="K">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">劇場版　始まりの…</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥11,300</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="L">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">ミューズ</p>
+                                            <hr class="divider">
+                                            <p class="name">STARMINE ver.1.0</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥9,500</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guzzu-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="M">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">夏の日の思い出 ド…</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥3,200</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guzzu-right">
+                            <div class="container">
+                                <div class="hi-img-right">
+                                    <p>~11/16</p>
+                                    <img src="../../img/購入済.png" alt="N">
+                                </div>
+                                <div class="inf-meter">
+                                    <div class="name-container">
+                                        <div class="name-divider">
+                                            <p class="osi">カンパネルラ</p>
+                                            <hr class="divider">
+                                            <p class="name">劇場版　始まりの…</p>
+                                        </div>
+                                    </div>
+                                    <p class="price">¥2,000</p>
+                                </div>
+                                <div class="meter-app container">
+                                    <p class="app">Complete！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
+
+    <!-- モーダルウィンドウ -->
+    <!-- 共通のモーダル -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="../../img/Y_A.png" alt="Y_A" class="modal-image">
+            <p id="modal-content-text">アイテムの詳細がここに表示されます。</p>
+            <div id="modal-details">
+                <!-- モーダルの内容がここに表示される -->
+            </div>
+            <button id="modalClose" type="button" class="btn">閉じる</button>
+        </div>
+    </div>
+
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal2')">&times;</span>
+            <p>ミューズ STARMINE ver.4.0の詳細情報をここに記入します。</p>
+        </div>
+    </div>
+
+    <script src="goods.js"></script>
+
+
     <footer class="footer">
         <p>©️ 2024 Time for Fave. All rights reserved.</p>
     </footer>
