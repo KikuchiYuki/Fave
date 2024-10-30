@@ -86,16 +86,40 @@
             <a href="../work_add/work_add.html"><img class="add" src="../../img/ADD.png" alt="add"></a>
 
             <div class="scroll-content">
-                <div class="worklist">
+                <div class="shift_roop">
                     <div class="container">
-                        <hr>
-                        
+                        <div class="vertical-line"></div>
+                        <span class="work_name">まいにちマート</span>
+                        <div class="timemoney">¥ 900</div>
+                        <div class="img_icon"><a href="../work_edit/work_edit.html"><img src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+
+
+    <!-- モーダルウィンドウ -->
+    <div id="easyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>本当に削除しますか？</h3>
+                <div class="modal-h4">
+                    <h4>※消した後は二度と元に戻れません。</h4>
+                    <h4>※内容はすべて削除されます。</h4>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- モーダル内の削除を確定するボタン -->
+                <button id="confirmDelete" type="button" class="btn">削除</button>
+                <button id="cancelDelete" type="button" class="btn">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="work.js"></script>
 </body>
 
 <footer>

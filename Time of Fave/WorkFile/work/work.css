@@ -13,3 +13,209 @@
     opacity: 0.7;
 }
 
+.a {
+    display: inline-block;
+    /* インライン要素でも幅を指定できるようにする */
+    width: 26%;
+    /* 必要に応じて幅を調整（例：100px） */
+    height: auto;
+    /* 画像の縦横比を維持するためにautoを指定 */
+    padding: 0;
+    /* 余計なパディングがないか確認 */
+    margin: 0;
+    /* 必要に応じてマージンを調整 */
+}
+
+.btn {
+    margin-top: 12px;
+    font-family: "Noto Serif JP", serif;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 17px;
+    color: #CB5B00;
+    background-color: #FFFFF3;
+    border: #CB5B00 3px solid;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+
+
+
+/*　シフトループ　*/
+.scroll-content{
+    margin: 0;
+    margin-left: 5rem;
+    height: auto;
+}
+.vertical-line {
+    width: 0.5rem; /* 縦棒の幅 */
+    height: 3.6rem; /* 縦棒の高さ */
+    border-radius: 5px;
+    background-color: #A76CE6; /* 縦棒の色 */
+    margin: 10px; /* 余白（オプション） */
+}
+.shift_roop{
+    color: #24063A;
+    margin:0;
+    background-color: #FFFFF3;
+    width:51rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.date{
+    margin: 1rem 1.5rem auto 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.work_name,.timemoney{
+    font-weight: 600;
+    margin: 1.3rem 0 auto 4rem;
+    font-size: 1.5rem;
+}
+
+.timemoney {
+    margin-right: 30%;
+}
+
+.img_icon img{
+    margin: 0.7rem 1.6rem auto 0;
+    width: 3.5rem;
+    border-radius: 5px;
+}
+
+/* モーダルの初期状態を非表示にする */
+.modal {
+    display: none; /* 初期状態では表示しない */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 背景の半透明黒 */
+}
+
+/* モーダル全体の中央揃え */
+.modal-content {
+    background-color: #DADCFB;
+    border: 3px solid #221D7E;
+    border-radius: 3.5px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42%;
+    height: 46%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    min-width: 500px;
+    text-align: center; /* モーダル全体のテキストを中央寄せ */
+}
+
+/* モーダルヘッダーのスタイル調整 */
+.modal-header {
+    text-align: center; /* テキストを中央揃え */
+    padding-top: 40px;
+    margin: 0 auto;
+    /* margin-bottom: 20px; */
+
+}
+
+/* モーダルのh3スタイル調整 */
+.modal-header h3 {
+    font-size: 28px;
+    color: #221D7E;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-align: center; /* h3も中央寄せ */
+}
+.modal-h4{
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+}
+.modal-header h4 {
+    color: #FE3939;    
+    margin-left: 0;      /* 左マージンをリセット */
+    margin-right: 0;     /* 右マージンもリセット */
+    padding-left: 0;     /* 左の余白もリセット */
+    width: 100%;         /* 幅を100%に設定して、同じ幅に揃える */
+    display: block;      /* ブロック要素にして幅を確保 */
+    text-align: left;
+}
+
+/* ボタン配置の調整 */
+.modal-body {
+    display: flex;
+    justify-content: center; /* ボタンを中央に揃える */
+    gap: 15px; /* ボタンの間隔 */
+    padding-top: 20px;
+}
+
+
+/* 削除確認ボタン */
+#confirmDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 3%;
+    color: #221D7E;
+    border-radius: 3px;
+    padding: 5px 40px;
+    margin-right: 3%;
+    background-color: #FF6666; 
+    height: 100%;
+    border: none;
+}
+
+/* 削除ボタンとキャンセルボタン */
+#confirmDelete, #cancelDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 5px 40px;
+    background-color: #FF6666;
+    border-radius: 3px;
+    margin-right: 3%;
+    height: 100%;
+}
+
+#confirmDelete:hover {
+    background-color: #ff8787;
+}
+
+/* キャンセルボタン */
+#cancelDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bolder;
+    margin-top: 3%;
+    color: #221D7E;
+    background-color: #FFFFF3;
+    border-radius: 3px;
+    padding: 5px 20px;
+    text-decoration: none;
+    height: 100%;
+    border: none;
+}
+
+#cancelDelete:hover {
+    background-color: #ececec;
+}
+
+.btn{
+    margin-left: 20px;
+}
+
+#container_btn .modalOpen{
+    margin: 30px;
+}
+
+.btn {
+    margin: 0.2px;
+}
