@@ -25,7 +25,7 @@ function confirmDelete() {
 
 // キャンセルボタンをクリックしたらマイページに遷移する処理
 document.getElementById('cancelDeletePage').addEventListener('click', function() {
-  window.location.href = 'http://127.0.0.1:5500/Time%20of%20Fave/Time of Fave/MypageFile/mypage/mypage.html';
+  window.location.href = 'http://127.0.0.1:5500/Time%20of%20Fave/Time of Fave/WorkFile/work/work.html';
 });
 
 // モーダル外をクリックしたときにモーダルを閉じる
