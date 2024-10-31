@@ -26,21 +26,6 @@
     /* 必要に応じてマージンを調整 */
 }
 
-.btn {
-    margin-top: 12px;
-    font-family: "Noto Serif JP", serif;
-    padding: 10px 20px;
-    font-weight: 900;
-    font-size: 17px;
-    color: #CB5B00;
-    background-color: #FFFFF3;
-    border: #CB5B00 3px solid;
-    border-radius: 7px;
-}
-
-.btn:hover {
-    opacity: 0.7;
-}
 
 
 
@@ -60,7 +45,7 @@
 }
 .shift_roop{
     color: #24063A;
-    margin:0;
+    margin: 0;
     background-color: #FFFFF3;
     width:51rem;
     padding: 0.5rem;
@@ -72,14 +57,19 @@
     font-weight: 600;
 }
 
+.work_name {
+    width: 35%;
+}
+
 .work_name,.timemoney{
     font-weight: 600;
-    margin: 1.3rem 0 auto 4rem;
+    margin: 1.3rem 0 auto 1.5rem;
     font-size: 1.5rem;
 }
 
 .timemoney {
-    margin-right: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .img_icon img{
@@ -88,11 +78,15 @@
     border-radius: 5px;
 }
 
+.img_icon a:hover {
+    opacity: 0.7;
+}
+
 /* モーダルの初期状態を非表示にする */
 .modal {
     display: none; /* 初期状態では表示しない */
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -110,7 +104,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 42%;
-    height: 46%;
+    height: 40%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     padding: 20px;
     min-width: 500px;
@@ -120,7 +114,7 @@
 /* モーダルヘッダーのスタイル調整 */
 .modal-header {
     text-align: center; /* テキストを中央揃え */
-    padding-top: 40px;
+    padding-top: 35px;
     margin: 0 auto;
     /* margin-bottom: 20px; */
 
@@ -138,28 +132,46 @@
     display: inline-block;
     text-align: left;
     margin: 0 auto;
+    color: #FE3939;  
+    text-align: center;
 }
 .modal-header h4 {
-    color: #FE3939;    
     margin-left: 0;      /* 左マージンをリセット */
     margin-right: 0;     /* 右マージンもリセット */
     padding-left: 0;     /* 左の余白もリセット */
     width: 100%;         /* 幅を100%に設定して、同じ幅に揃える */
     display: block;      /* ブロック要素にして幅を確保 */
+}
+
+.kome {
+    width: 65%;
+    margin: 10px auto;
+}
+
+.ko {
+    width: 15%;
+    text-align: right;
+    padding-right: 3%;
+}
+
+.me {
+    width: 80%;
     text-align: left;
 }
+
+
 
 /* ボタン配置の調整 */
 .modal-body {
     display: flex;
     justify-content: center; /* ボタンを中央に揃える */
     gap: 15px; /* ボタンの間隔 */
-    padding-top: 20px;
+    padding-top: 6px;
 }
 
 
 /* 削除確認ボタン */
-#confirmDelete {
+#confirmDelete1 {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
     font-weight: bold;
@@ -174,7 +186,7 @@
 }
 
 /* 削除ボタンとキャンセルボタン */
-#confirmDelete, #cancelDelete {
+#confirmDelete1, #cancelDelete2 {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
     font-weight: bold;
@@ -183,14 +195,16 @@
     border-radius: 3px;
     margin-right: 3%;
     height: 100%;
+    border: #221D7E 0.5px solid;
+
 }
 
-#confirmDelete:hover {
+#confirmDelete2:hover {
     background-color: #ff8787;
 }
 
 /* キャンセルボタン */
-#cancelDelete {
+#cancelDelete2 {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
     font-weight: bolder;
@@ -202,20 +216,46 @@
     text-decoration: none;
     height: 100%;
     border: none;
+    border: #221D7E 0.5px solid;
+
 }
 
-#cancelDelete:hover {
+#cancelDelete2:hover {
     background-color: #ececec;
 }
 
 .btn{
     margin-left: 20px;
+    border: #221D7E 0.5px solid;
+    margin: 0.2px;
 }
 
 #container_btn .modalOpen{
     margin: 30px;
 }
 
-.btn {
-    margin: 0.2px;
+.modal-body .btn {
+    border: #221D7E 0.5px solid;
+}
+
+.close {
+    color: #221D7E;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    background-color: #FFFFF3;
+    padding: 5px 20px;
+    border-radius: 5px;
+    padding-top: 5px;
+    border: 0.5px solid #221D7E;
+    font-family: "Noto Serif JP", serif;
+    margin-top: 10%;
+}
+
+.close:hover,
+.close:focus {
+    color: #221D7E;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ececec;
 }
