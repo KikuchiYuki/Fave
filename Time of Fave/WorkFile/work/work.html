@@ -92,29 +92,55 @@
                         <span class="work_name">まいにちマート</span>
                         <div class="timemoney">¥ 900</div>
                         <div class="img_icon"><a href="../work_edit/work_edit.html"><img src="../../img/EDIT2.png"></a></div>
-                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
+                        <div class="img_icon"><a href="#" id="showModal1" ><img src="../../img/DELE2.png"></a></div>
+                    </div>
+                </div>
+                <br>
+                <div class="shift_roop">
+                    <div class="container">
+                        <div class="vertical-line"></div>
+                        <span class="work_name">茎わかめファクトリー</span>
+                        <div class="timemoney">¥ 930</div>
+                        <div class="img_icon"><a href="../work_edit/work_edit.html"><img src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon"><a href="#" id="showModal2" ><img src="../../img/DELE2.png"></a></div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-
     <!-- モーダルウィンドウ -->
-    <div id="easyModal" class="modal">
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>削除できません。</h3>
+                <h4 class="modal-h4">※ このバイト先はメイン設定されています。</h4>
+            </div>
+            <div class="modal-body">
+                <button id="cancelDelete1" type="button" class="btn close">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>本当に削除しますか？</h3>
-                <div class="modal-h4">
-                    <h4>※消した後は二度と元に戻れません。</h4>
-                    <h4>※内容はすべて削除されます。</h4>
+                <h4 class="modal-h4">※消した後は二度と元に戻れません。</h4>
+                <div>
+                    <div class="container kome">
+                        <h4 class="ko">バイト先名：</h4>
+                        <h4 class="me">茎わかめファクトリー</h4>
+                    </div>
+                    <div class="container kome">
+                        <h4 class="ko">時給(円)：</h4>
+                        <h4 class="me">¥ 930</h4>
+                    </div>
                 </div>
             </div>
             <div class="modal-body">
-                <!-- モーダル内の削除を確定するボタン -->
-                <button id="confirmDelete" type="button" class="btn">削除</button>
-                <button id="cancelDelete" type="button" class="btn">キャンセル</button>
+                <button id="confirmDelete1" type="button" class="btn">削除</button>
+                <button id="cancelDelete2" type="button" class="btn">キャンセル</button>
             </div>
         </div>
     </div>
