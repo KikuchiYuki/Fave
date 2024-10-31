@@ -119,10 +119,32 @@
     <div id="easyModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h1>本当に登録しますか？</h1>
+                <h1>以下の内容で追加しますか？</h1>
             </div>
             <div class="modal-body">
-                <button id="confirmRe" type="button" class="btn2">登録</button>
+                <table>
+                    <tr>
+                        <td>バイト先 : </td>
+                        <td class="value">まいにちマート</td>
+                    </tr>
+                    <tr>
+                        <td>開始 : </td>
+                        <td class="value">2024/9/25 (水) 9:00</td>
+                    </tr>
+                    <tr>
+                        <td>終了 : </td>
+                        <td class="value">2024/9/25 (水) 14:00</td>
+                    </tr>
+                    <tr>
+                        <td>休憩 : </td>
+                        <td class="value">なし</td>
+                    </tr>
+                    <tr>
+                        <td>時給(円) : </td>
+                        <td class="value">￥900</td>
+                    </tr>
+                </table>
+                <button id="confirmRe" type="button" class="btn2">追加</button>
                 <button id="cancelRe" type="button" class="btn2">キャンセル</button>
             </div>
         </div>
@@ -137,14 +159,15 @@
 
                 <div class="radio">
                     <div class="radio-con">
-                        <input type="radio" id="zikyu-change" name="zikyu-change" value="1">
-                        <label for="inq1">今回のシフトだけ変更</label>
+                        <input type="radio" id="zikyu-change-1" name="zikyu-change" value="1">
+                        <label for="zikyu-change-1">今回のシフトだけ変更</label>
                     </div>
                     <div class="radio-con">
-                        <input type="radio" id="zikyu-change" name="zikyu-change" value="2">
-                        <label for="inq2"> 今日以降の日付のシフトと、<br>バイト先情報の時給も変更</label>
+                        <input type="radio" id="zikyu-change-2" name="zikyu-change" value="2">
+                        <label for="zikyu-change-2">今日以降の日付のシフトと、<br>バイト先情報の時給も変更</label>
                     </div>
                 </div>
+                
             </div>
             <div class="modal-body">
                 <button id="confirmRe2" type="button" class="btn2">完了</button>

@@ -104,16 +104,37 @@
     margin-bottom: 20px;
 }
 #easyModal2 input[type="radio"] {
-    color: #221D7E;
-    font-family: "Noto Serif JP", serif;
-    height: 40px;
-    padding: 8px;
-    margin-right: 8px;
-    border: 0.5px solid #221D7E;
-    border-radius: 5px;
-    box-sizing: border-box;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #221D7E; /* ボーダー色 */
+    border-radius: 50%; /* 丸にする */
     background-color: #FFFFF3;
-    vertical-align: bottom;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+input[type="radio"]:checked {
+    background-color: #FFFFF3; /* チェック時の背景色 */
+}
+
+input[type="radio"]::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #221D7E; /* 内側の色 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+}
+
+input[type="radio"]:checked::before {
+    transform: translate(-50%, -50%) scale(1); /* チェック時に表示 */
 }
 
 
@@ -456,4 +477,24 @@ td {
 
 .kyan:hover {
     background-color: #ececec;
+}
+
+.modal-body .value {
+    text-align: left !important; /* !importantで優先順位を上げる */
+}
+
+.modal-body table{
+    margin: 0 auto;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 900;
+}
+.modal-body td{
+    margin: 0;
+    padding: 8px;
+    text-align: right;
+}
+.modal-body .value td{
+    margin: 0;
+    text-align: left !important;
 }

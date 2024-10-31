@@ -29,10 +29,14 @@ function modalClose() {
 
 // モーダルの「登録」ボタンを押したときの処理
 buttonConfirmRe.addEventListener('click', confirmRe);
-buttonConfirmRe2.addEventListener('click', confirmRe); // 修正
 function confirmRe() {
+    window.location.href = '../shift/shift.html'; // 遷移先
+}
+buttonConfirmRe2.addEventListener('click', confirmRe2); // 修正
+function confirmRe2() {
     window.location.href = '../shift_add/shift_add.html'; // 遷移先
 }
+
 
 // モーダルの外をクリックして閉じる
 window.addEventListener('click', outsideClose);
