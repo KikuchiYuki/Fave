@@ -34,3 +34,17 @@ document.addEventListener('click', function(e) {
     modalClose();
   }
 });
+
+
+// ファイル選択後にファイル名を表示する関数
+function updateFileName() {
+  const fileInput = document.getElementById('fileInput');
+  const fileLabel = document.getElementById('fileLabel');
+
+  // ファイルが選択されている場合
+  if (fileInput.files.length > 0) {
+      fileLabel.textContent = fileInput.files[0].name; // ファイル名を表示
+  } else {
+      fileLabel.textContent = "ファイルを選択してください"; // 初期プレースホルダー
+  }
+}

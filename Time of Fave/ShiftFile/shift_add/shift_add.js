@@ -47,3 +47,40 @@ function outsideClose(e) {
         modalClose(); // モーダル2を閉じる
     }
 }
+
+function hidePlaceholder(input) {
+    const placeholder = input.previousElementSibling;
+    placeholder.style.display = 'none'; // プレースホルダーを非表示にする
+}
+
+function showPlaceholder(input) {
+    const placeholder = input.previousElementSibling;
+    if (!input.value) {
+        placeholder.style.display = 'block'; // 入力がない場合はプレースホルダーを表示
+    }
+}
+
+// 初期状態でプレースホルダーを表示
+window.onload = () => {
+    const inputs = document.querySelectorAll('.pl-input');
+    inputs.forEach(input => {
+        const placeholder = input.previousElementSibling;
+        if (!input.value) {
+            placeholder.style.display = 'block'; // 初期状態でプレースホルダーを表示
+        }
+    });
+};
+
+
+// 初期表示時の文字色変更
+$(window).on('load', function ()
+	{
+		$.each($('input[type=date]'), (index, datebox) =>
+			{
+				datebox.style.color = (datebox.value) ? 'black' : 'white';
+			}
+		);
+	}
+);
+
+

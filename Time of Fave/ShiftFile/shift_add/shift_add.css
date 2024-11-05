@@ -392,19 +392,36 @@ td {
     padding-left: 3rem;
 }
 
-.pl {
-    position: relative;
-}
-
-.pl::before {
-    content: attr(placeholder);
+/*
+ .pl-placeholder {
+    color: gray;
     position: absolute;
-    bottom: 5px;
+    pointer-events: none;
+    margin-left: 10px;
+    margin-top: 12px;
+    display: none; 
 }
 
-.pl::-webkit-datetime-edit-fields-wrapper {
-    display: none;
+.pl-input {
+    padding: 10px;
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box; 
 }
+
+
+.input-container {
+    position: relative;
+    margin-top: 10px; 
+}
+
+.input-container input {
+    position: relative;
+    z-index: 1; 
+} 
+*/
+
 
 .zikyu-color {
     color: #5A56A4;
