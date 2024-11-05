@@ -266,18 +266,29 @@ form {
     font-weight: 900;
 }
 
+/* datetime-localフィールドのデフォルトスタイルをリセット */
 input[type="datetime-local"] {
-    font-size: 18px;
-    color: #A9A8C2;
+    -webkit-appearance: none; /* SafariなどのWebkitブラウザ用 */
+    -moz-appearance: textfield; /* Firefox用 */
+    appearance: none; /* 他のブラウザ */
+    background-color: transparent; /* 背景を透明に */
+    border: none; /* デフォルトの枠線を消す */
+    padding: 0;
+    margin: 0;
     font-family: "Noto Serif JP", serif;
-    height: 40px;
-    width: 25rem;
-    padding: 8px;
-    border: 0.5px solid #221D7E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #FFFFF3;
 }
+
+/* カスタムスタイルの設定 */
+input[type="datetime-local"] {
+    background-color: #FFFFF3; /* 背景色 */
+    border: 1px solid #221D7E; /* 枠線の色 */
+    border-radius: 5px; /* 角の丸み */
+    padding: 10px 12px; /* 内側の余白 */
+    font-size: 16px; /* 文字サイズ */
+    color: #A9A8C2; /* 文字色 */
+    width: 100%; /* 幅を100%にする */
+}
+
 
 input[type="text"] {
     font-size: 18px;
@@ -392,35 +403,47 @@ td {
     padding-left: 3rem;
 }
 
-/*
- .pl-placeholder {
-    color: gray;
-    position: absolute;
-    pointer-events: none;
-    margin-left: 10px;
-    margin-top: 12px;
-    display: none; 
+/* カスタムプレースホルダーのスタイル */
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 86%;
 }
 
 .pl-input {
-    padding: 10px;
-    font-size: 16px;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #FFFFF3;
+    border: 1px solid #221D7E;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 18px;
+    color: #221D7E;
+    width: 86%;
+    box-sizing: border-box;
+    width: 8rem;
+    height: 40px;
+}
+
+.pl-placeholder {
+    position: absolute;
+    top: 33%;
+    margin-left: 8px;
+    color: #A9A8C2;
+    background-color: #FFFFF3;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* フォーカス時と入力済みの場合はプレースホルダーを非表示に */
+.pl-input:focus + .pl-placeholder,
+.pl-input:not(:placeholder-shown) + .pl-placeholder {
+    display: none;
 }
 
 
-.input-container {
-    position: relative;
-    margin-top: 10px; 
-}
 
-.input-container input {
-    position: relative;
-    z-index: 1; 
-} 
-*/
 
 
 .zikyu-color {
