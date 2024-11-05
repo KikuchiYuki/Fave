@@ -48,15 +48,17 @@ function outsideClose(e) {
     }
 }
 
+// プレースホルダーを非表示にする関数
 function hidePlaceholder(input) {
-    const placeholder = input.previousElementSibling;
-    placeholder.style.display = 'none'; // プレースホルダーを非表示にする
+    const placeholder = input.nextElementSibling;
+    if (placeholder) placeholder.style.display = 'none';
 }
 
+// プレースホルダーを表示する関数
 function showPlaceholder(input) {
-    const placeholder = input.previousElementSibling;
     if (!input.value) {
-        placeholder.style.display = 'block'; // 入力がない場合はプレースホルダーを表示
+        const placeholder = input.nextElementSibling;
+        if (placeholder) placeholder.style.display = 'block';
     }
 }
 
@@ -64,23 +66,23 @@ function showPlaceholder(input) {
 window.onload = () => {
     const inputs = document.querySelectorAll('.pl-input');
     inputs.forEach(input => {
-        const placeholder = input.previousElementSibling;
+        const placeholder = input.nextElementSibling;
         if (!input.value) {
-            placeholder.style.display = 'block'; // 初期状態でプレースホルダーを表示
+            placeholder.style.display = 'block';
         }
     });
 };
 
 
-// 初期表示時の文字色変更
-$(window).on('load', function ()
-	{
-		$.each($('input[type=date]'), (index, datebox) =>
-			{
-				datebox.style.color = (datebox.value) ? 'black' : 'white';
-			}
-		);
-	}
-);
 
+function hidePlaceholder(input) {
+    const placeholder = input.nextElementSibling;
+    if (placeholder) placeholder.style.display = 'none';
+}
 
+function showPlaceholder(input) {
+    if (!input.value) {
+        const placeholder = input.nextElementSibling;
+        if (placeholder) placeholder.style.display = 'block';
+    }
+}
