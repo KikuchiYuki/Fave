@@ -267,6 +267,8 @@ input[type="checkbox"] {
   white-space: noweap;
 }
 
+
+
 .btn-plus {
   margin: 0;
   padding: 0;
@@ -305,6 +307,8 @@ input[type="checkbox"] {
   height: auto;
   /* 高さは自動調整 */
 }
+
+
 
 
 .custom-file-select {
@@ -371,4 +375,226 @@ select {
 
 .hidden {
   display: none;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #DADCFB;
+  border: 3px solid #221D7E;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 50%;
+  height: 80%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.modal-header h1 {
+  color: #221D7E;
+  font-weight: bolder;
+}
+
+.modal-header {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.modalClose {
+  font-size: 2rem;
+}
+
+.modal-body {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.modal-body table img {
+  width: 20%;
+  border-radius: 100%;
+}
+
+.modal-body table {
+  width: 95%;
+  margin: 0 auto;
+  border-spacing: 10px;
+  font-size: 18px;
+}
+
+.modal-body table th {
+  width: 45%;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 2px;
+}
+
+.modal-body table td {
+  width: 55%;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 4px;
+}
+
+
+#confirmReGoods,
+#confirmReEvents {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #63ACF6;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px;
+  margin-right: 5%;
+}
+
+#confirmReGoods:hover {
+  background-color: #98c5f3;
+}
+
+#confirmReEvents:hover {
+  background-color: #98c5f3;
+}
+
+
+#cancelReGoods,
+#cancelReEvents {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bolder;
+  margin-top: 20px;
+  color: #221D7E;
+  background-color: #FFFFF3;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+
+}
+
+#cancelReGoods:hover {
+  background-color: #ececec;
+}
+
+#cancelReEvents:hover {
+  background-color: #ececec;
+}
+
+td .text {
+  font-size: 9px;
+}
+
+
+
+.modealbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn3 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bolder;
+  margin-top: 20px;
+  color: #221D7E;
+  background-color: #FFFFF3;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+#AddGoods,
+#AddEvents {
+  background-color: #FF6666;
+  padding: 5px 40px;
+  margin-right: 5%;
+}
+
+#AddGoods:hover,
+#AddEvents:hover {
+  background-color: #ff8787;
+}
+
+#ReGoods,
+#ReEvents {
+  background-color: #FFFFF3;
+  padding: 5px 20px;
+}
+
+#ReGoods:hover,
+#ReEvents:hover {
+  background-color: #ececec;
+}
+
+.modalbody {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content2 {
+  background-color: #DADCFB;
+  border: 3px solid #221D7E;
+  border-radius: 10px;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 50%;
+  height: 46%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.modalbody input[type="text"] {
+  color: #66639C;
+  font-family: "Noto Serif JP", serif;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 0.5px solid #221D7E;
+  background: rgba(255, 255, 243, 1);
+  width: 20.5rem;
+  margin-left: 6px;
+}
+.modal-group{
+  font-size: 20px;
+  text-align: left;
+  display: flex;
+  margin: 1% auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modal-group .osi{
+  display: inline-block;
+  width: 150px;
+  vertical-align: top;
+  text-align: right;
 }

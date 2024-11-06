@@ -104,12 +104,12 @@
                             <option value="option1">カンパネルラ</option>
                             <option value="option2">ミューズ</option>
                         </select>
-                        <div class="btn-plus">
+                        <!-- グッズ用プラスボタン -->
+                        <div id="plusButtonGoods" class="btn-plus">
                             <button class="plus" type="button">
                                 <img src="../../img/plus.png" alt="plus">
                             </button>
                         </div>
-
                     </div>
 
                     <div class="form-group">
@@ -150,7 +150,7 @@
 
                     <div class="form-group">
                         <div class="btn">
-                            <button id="modalOpen" type="button" class="in">追加</button>
+                            <button id="modalOpenGoods" type="button" class="in">追加</button>
                             <a class="kyan" href="../goods/goods.html">キャンセル</a>
                         </div>
                     </div>
@@ -165,7 +165,8 @@
 
                     <div class="form-group">
                         <label for="goods_name"><span class="req">＊</span> イベント名：</label>
-                        <input type="text" class="goods_name" name="goods_name" placeholder="イベントの名前を入力してください。" required>
+                        <input type="text" class="goods_name" name="goods_name" placeholder="イベントの名前を入力してください。"
+                            required>
                     </div>
 
                     <div class="form-group">
@@ -180,7 +181,8 @@
                             <option value="option1">カンパネルラ</option>
                             <option value="option2">ミューズ</option>
                         </select>
-                        <div class="btn-plus">
+                        <!-- イベント用プラスボタン -->
+                        <div id="plusButtonEvents" class="btn-plus">
                             <button class="plus" type="button">
                                 <img src="../../img/plus.png" alt="plus">
                             </button>
@@ -226,7 +228,7 @@
 
                     <div class="form-group">
                         <div class="btn">
-                            <button id="modalOpen" type="button" class="in">追加</button>
+                            <button id="modalOpenEvents" type="button" class="in">追加</button>
                             <a class="kyan" href="../goods/goods.html">キャンセル</a>
                         </div>
                     </div>
@@ -234,10 +236,144 @@
             </div>
         </div>
     </div>
+    <div id="easyModalGoods" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>以下の内容でよろしいですか？</h1>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <th>日付：</th>
+                        <td>2025/1/11</td>
+                    </tr>
+                    <tr>
+                        <th>グッズ名：</th>
+                        <td>銀河鉄道の夜　28巻</td>
+                    </tr>
+                    <tr>
+                        <th>金額(円)：</th>
+                        <td>￥865</td>
+                    </tr>
+                    <tr>
+                        <th>推し：</th>
+                        <td>カンパネルラ</td>
+                    </tr>
+                    <tr>
+                        <th>優先度：</th>
+                        <td><img src="../../img/Y_B.png" alt="b"></td>
+                    </tr>
+                    <tr>
+                        <th>メモ：</th>
+                        <td>カンパネルラが表紙！！！！！！</td>
+                    </tr>
+                    <tr>
+                        <th>購入済：</th>
+                        <td><input type="checkbox" class="text">
+                            <span class="text">※購入済みの場合はチェックを入れてください。</span>
+                        </td>
+                    </tr>
+
+                </table>
+                <button id="confirmReGoods" type="button" class="btn2">追加</button>
+                <button id="cancelReGoods" type="button" class="btn2">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="easyModalEvents" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>以下の内容でよろしいですか？</h1>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <th>日付：</th>
+                        <td>2026/1/1</td>
+                    </tr>
+                    <tr>
+                        <th>イベント名：</th>
+                        <td>Meteor</td>
+                    </tr>
+                    <tr>
+                        <th>金額(円)：</th>
+                        <td>￥10,200</td>
+                    </tr>
+                    <tr>
+                        <th>推し：</th>
+                        <td>ミューズ</td>
+                    </tr>
+                    <tr>
+                        <th>優先度：</th>
+                        <td><img src="../../img/Y_B.png" alt="b"></td>
+                    </tr>
+                    <tr>
+                        <th>メモ：</th>
+                        <td>11:45分から！！！</td>
+                    </tr>
+                    <tr>
+                        <th>参加済：</th>
+                        <td><input type="checkbox" class="text">
+                            <span class="text">※参加済みの場合はチェックを入れてください。</span>
+                        </td>
+                    </tr>
+
+                </table>
+                <button id="confirmReEvents" type="button" class="btn2">追加</button>
+                <button id="cancelReEvents" type="button" class="btn2">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- プラスボタンのモーダル -->
+    <div id="modal" class="modalbody">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content2">
+            <div class="modal-header">
+                <h1>推しの追加</h1>
+            </div>
+            <form id="plusForm">
+                <div class="modal-group">
+                    <label for="modalosi" class="osi">推しの名前：</label>
+                    <input type="text" class="modalosi" name="modalosi" placeholder="推しを入力してください。">
+                </div>
+                <div class="modealbtn">
+                    <button id="AddGoods" type="button" class="btn3">追加</button>
+                    <button id="ReGoods" type="button" class="btn3">キャンセル</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- イベント用のプラスボタンのモーダル -->
+    <div id="modalEvents" class="modalbody">
+        <span class="close" id="closeModalEvents">&times;</span>
+        <div class="modal-content2">
+            <div class="modal-header">
+                <h1>推しの追加</h1>
+            </div>
+            <form id="plusFormEvents">
+                <div class="modal-group">
+                    <label for="modalosi" class="osi">推しの名前：</label>
+                    <input type="text" class="modalosi" name="modalosi" placeholder="推しを入力してください。">
+                </div>
+                <div class="modealbtn">
+                    <button id="AddEvents" type="button" class="btn3">追加</button>
+                    <button id="ReEvents" type="button" class="btn3">キャンセル</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
     <script src="goods_add.js"></script>
     <footer>
         <p>© 2024 Time of Fave Inc. All Rights Reserved.</p>
     </footer>
-    </body>
+</body>
 
 </html>
