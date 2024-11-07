@@ -408,8 +408,6 @@ td {
     justify-content: center;
     /* ボタンを中央に揃える */
     gap: 15px;
-    /* ボタンの間隔 */
-    padding-top: 20px;
 }
 
 
@@ -461,10 +459,38 @@ form {
     align-items: center;
 }
 
-.modal_title {
+.moA {
+    width: 100%;
+    margin: 5%;
+}
+
+.moa {
+    align-items: center;
+}
+
+.moA tr {
+    padding: 3px;
+}
+
+.moA th {
     margin-right: 10px;
     font-family: "Noto Serif JP", serif;
     color: #221D7E;
     font-size: 19px;
     font-weight: 900;
+    text-align: right;
+    width: 30%;
 }
+
+.moA td {
+    width: 55%;
+    text-align: left;
+    padding: 1%;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
