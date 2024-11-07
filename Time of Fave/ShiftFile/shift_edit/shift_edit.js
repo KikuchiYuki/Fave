@@ -86,3 +86,20 @@ function showPlaceholder(input) {
         if (placeholder) placeholder.style.display = 'block';
     }
 }
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // すべてのカスタムプレースホルダーを処理
+    document.querySelectorAll('.input-container').forEach(container => {
+        const input = container.querySelector('.pl-input');
+        const placeholder = container.querySelector('.pl-placeholder');
+
+        // プレースホルダーをクリックすると、inputにフォーカスして開く
+        placeholder.addEventListener('click', () => {
+            input.focus();  // inputにフォーカス
+            input.click();  // 日付ピッカーを開くためにクリックを追加
+        });
+    });
+});

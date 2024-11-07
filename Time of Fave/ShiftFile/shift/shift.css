@@ -72,6 +72,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 53%;
+    height: 75%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    min-width: 500px;
+    text-align: center;
+    /* モーダル全体のテキストを中央寄せ */
+    padding-bottom: 30px;
+}
+
+.modal-content1 {
+    background-color: #DADCFB;
+    border: 3px solid #221D7E;
+    border-radius: 3.5px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 53%;
     height: 55%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     padding: 20px;
@@ -150,6 +168,23 @@
     background-color: #98c5f3;
 }
 
+#confirmDelete2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 3%;
+    color: #221D7E;
+    background-color: #FF6666;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    padding: 5px 40px;
+    margin-right: 3%;
+}
+
+#confirmDelete2:hover {
+    background-color: #ff8787;
+}
+
 /* キャンセルボタン */
 #cancelDelete {
     font-family: "Noto Serif JP", serif;
@@ -164,6 +199,22 @@
 }
 
 #cancelDelete:hover {
+    background-color: #ececec;
+}
+
+#cancelDelete2 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bolder;
+    color: #221D7E;
+    background-color: #FFFFF3;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+#cancelDelete2:hover {
     background-color: #ececec;
 }
 
@@ -293,4 +344,20 @@ select {
 }
 .img_icon img:hover{
     opacity: 0.7;
+}
+
+.modal-body table{
+    margin: 0 auto;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 900;
+}
+.modal-body td{
+    margin: 0;
+    padding: 8px;
+    text-align: right;
+}
+.modal-body .value td{
+    margin: 0;
+    text-align: left !important;
 }

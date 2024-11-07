@@ -105,8 +105,9 @@
                             <span class="time">9:00</span>
                             <span class="time">15:00</span>
                         </div>
-                        <div class="img_icon"><a href="../shift_edit/shift_edit.html"><img src="../../img/EDIT2.png"></a></div>
-                        <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
+                        <div class="img_icon"><a href="../shift_edit/shift_edit.html"><img
+                                    src="../../img/EDIT2.png"></a></div>
+                        <div class="img_icon" id="deleteButton"><a href="#"><img src="../../img/DELE2.png"></a></div>
                     </div>
                 </div>
 
@@ -141,7 +142,7 @@
                         <div class="img_icon"><a href="#"><img src="../../img/DELE2.png"></a></div>
                     </div>
                 </div>
-                
+
                 <br>
 
                 <div class="shift_roop">
@@ -187,7 +188,7 @@
 
     <!-- モーダルウィンドウ -->
     <div id="easyModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content1">
             <div class="modal-header">
                 <h3>シフトの一括追加</h3>
                 <div class="modal-h4">
@@ -222,6 +223,47 @@
                 <!-- モーダル内の削除を確定するボタン -->
                 <button id="confirmDelete" type="button" class="btn">登録</button>
                 <button id="cancelDelete" type="button" class="btn">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- モーダルウィンドウ -->
+    <div id="easyModal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>本当に削除しますか？</h3>
+                <div class="modal-h4">
+                    <h4>※消した後は二度と元に戻せません。</h4>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <td>バイト先 : </td>
+                        <td class="value">まいにちマート</td>
+                    </tr>
+                    <tr>
+                        <td>開始 : </td>
+                        <td class="value">2024/9/25 (水) 9:00</td>
+                    </tr>
+                    <tr>
+                        <td>終了 : </td>
+                        <td class="value">2024/9/25 (水) 14:00</td>
+                    </tr>
+                    <tr>
+                        <td>休憩 : </td>
+                        <td class="value">なし</td>
+                    </tr>
+                    <tr>
+                        <td>時給(円) : </td>
+                        <td class="value">￥900</td>
+                    </tr>
+                </table>
+                <!-- モーダル内の削除を確定するボタン -->
+                <button id="confirmDelete2" type="button" class="btn">削除</button>
+                <button id="cancelDelete2" type="button" class="btn">キャンセル</button>
             </div>
         </div>
     </div>
