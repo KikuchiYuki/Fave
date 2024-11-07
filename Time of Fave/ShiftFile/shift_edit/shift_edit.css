@@ -538,3 +538,16 @@ td {
     margin: 0;
     text-align: left !important;
 }
+
+.img{
+    padding: 0;
+}
+td.img {
+    display: flex;
+    padding-top: 12px;
+}
+img{
+
+    margin: auto;
+    width: 2.75rem;
+}
