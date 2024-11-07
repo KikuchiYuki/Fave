@@ -320,3 +320,151 @@ td {
 .kyan:hover {
     background-color: #ececec;
 }
+
+.small-text {
+    font-size: 0.78em;
+    color: #221D7E;
+  }
+
+
+
+
+  /* モーダルの初期状態を非表示にする */
+.modal {
+    display: none;
+    /* 初期状態では表示しない */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 背景の半透明黒 */
+}
+
+/* モーダル全体の中央揃え */
+.modal-content {
+    background-color: #DADCFB;
+    border: 3px solid #221D7E;
+    border-radius: 3.5px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 53%;
+    height: 55%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    min-width: 500px;
+    text-align: center;
+    /* モーダル全体のテキストを中央寄せ */
+    padding-bottom: 30px;
+}
+
+/* モーダルヘッダーのスタイル調整 */
+.modal-header {
+    text-align: center;
+    /* テキストを中央揃え */
+    padding-top: 40px;
+    margin: 0 auto;
+    /* margin-bottom: 20px; */
+
+}
+
+/* モーダルのh3スタイル調整 */
+.modal-header h3 {
+    font-size: 28px;
+    color: #221D7E;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-align: center;
+    /* h3も中央寄せ */
+}
+
+.modal-h4 {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.modal-header h4 {
+    color: #FE3939;
+    margin-left: 0;
+    /* 左マージンをリセット */
+    margin-right: 0;
+    /* 右マージンもリセット */
+    padding-left: 0;
+    /* 左の余白もリセット */
+    width: 100%;
+    /* 幅を100%に設定して、同じ幅に揃える */
+    display: block;
+    /* ブロック要素にして幅を確保 */
+    text-align: left;
+}
+
+/* ボタン配置の調整 */
+.modal-body {
+    justify-content: center;
+    /* ボタンを中央に揃える */
+    gap: 15px;
+    /* ボタンの間隔 */
+    padding-top: 20px;
+}
+
+
+/* 削除確認ボタン */
+#confirmDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 3%;
+    color: #221D7E;
+    background-color: #63ACF6;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    padding: 5px 40px;
+    margin-right: 3%;
+}
+
+#confirmDelete:hover {
+    background-color: #98c5f3;
+}
+
+/* キャンセルボタン */
+#cancelDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bolder;
+    color: #221D7E;
+    background-color: #FFFFF3;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+#cancelDelete:hover {
+    background-color: #ececec;
+}
+
+#container_btn .modalOpen {
+    display: inline-block;
+    margin: 30px;
+}
+
+/* プルダウンメニューのスタイル */
+form {
+    margin: auto;
+    margin: 20px;
+    font-family: "Noto Serif JP", serif;
+    align-items: center;
+}
+
+.modal_title {
+    margin-right: 10px;
+    font-family: "Noto Serif JP", serif;
+    color: #221D7E;
+    font-size: 19px;
+    font-weight: 900;
+}

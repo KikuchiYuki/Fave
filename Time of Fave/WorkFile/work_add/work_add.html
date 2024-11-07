@@ -90,7 +90,7 @@
                         <tr>
                             <th><span>＊</span> バイト先 :</th>
                             <td>
-                                <input type="text" min="0" placeholder="バイト先名を入力してください。" >
+                                <input type="text" min="0" placeholder="バイト先名を入力してください。">
                             </td>
                         </tr>
                         <tr>
@@ -102,8 +102,8 @@
                         <tr>
                             <th>メイン設定 :</th>
                             <td>
-                                <input type="checkbox" min="0" placeholder="時給(円)を入力してください。">
-                                
+                                <input type="checkbox" min="0">
+                                <span class="small-text">※ メインのバイト先にする場合はチェックを入れてください。</span>
                             </td>
                         </tr>
                     </table>
@@ -115,6 +115,51 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+    <!-- モーダルウィンドウ -->
+    <div id="easyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>以下の内容で追加しますか？</h3>
+            </div>
+
+            <form id="myForm" action="#" method="get">
+                <div class="container">
+                    <div class="modal_title">バイト先 :</div>
+                    <div>にゃんカフェ</div>
+                </div>
+                <br>
+                <!-- カスタムファイル選択ボタン -->
+                <div class="container">
+                    <div class="aaa container">
+                        <div class="modal_title">時給(円)：</div>
+                        <div class="modal-a">¥1,050</div>
+                    </div>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="modal_title">メイン設定 :</div>
+                    <div>
+                        <input type="checkbox" min="0">
+                        <span class="small-text">※ メインのバイト先にする場合はチェックが入ります。</span>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="modal-body">
+                <!-- モーダル内の削除を確定するボタン -->
+                <button id="confirmDelete" type="button" class="btn">追加</button>
+                <button id="cancelDelete" type="button" class="btn">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="work_add.js"></script>
 </body>
 
 <footer>
