@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonCancelEvents.addEventListener('click', () => easyModalEvents.style.display = 'none'); // 変数名を変更
 
     buttonConfirmGoods.addEventListener('click', () => {
-        window.location.href = '../goods/goods.html';
+        window.location.href = '../../index/index.html';
     });
     buttonConfirmEvents.addEventListener('click', () => {
-        window.location.href = '../goods/goods.html';
+        window.location.href = '../../index/index.html';
     });
 
     window.addEventListener('click', (e) => {

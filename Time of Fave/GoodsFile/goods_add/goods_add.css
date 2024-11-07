@@ -377,7 +377,7 @@ select {
   display: none;
 }
 
-
+/* 追加ボタンのモーダル */
 .modal {
   display: none;
   position: fixed;
@@ -502,7 +502,7 @@ td .text {
 }
 
 
-
+/* プラスボタンのモーダル */
 .modealbtn {
   display: flex;
   justify-content: center;
@@ -523,14 +523,14 @@ td .text {
 
 #AddGoods,
 #AddEvents {
-  background-color: #FF6666;
+  background-color: rgba(255, 224, 61, 1);
   padding: 5px 40px;
   margin-right: 5%;
 }
 
 #AddGoods:hover,
 #AddEvents:hover {
-  background-color: #ff8787;
+  background-color: rgb(255, 234, 130);
 }
 
 #ReGoods,
@@ -583,7 +583,8 @@ td .text {
   width: 20.5rem;
   margin-left: 6px;
 }
-.modal-group{
+
+.modal-group {
   font-size: 20px;
   text-align: left;
   display: flex;
@@ -592,7 +593,8 @@ td .text {
   justify-content: center;
   width: 100%;
 }
-.modal-group .osi{
+
+.modal-group .osi {
   display: inline-block;
   width: 150px;
   vertical-align: top;
