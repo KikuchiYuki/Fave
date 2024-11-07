@@ -168,6 +168,23 @@
     background-color: #98c5f3;
 }
 
+#confirmDelete3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 3%;
+    color: #221D7E;
+    background-color: #63ACF6;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    padding: 5px 40px;
+    margin-right: 3%;
+}
+
+#confirmDelete3:hover {
+    background-color: #98c5f3;
+}
+
 #confirmDelete2 {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
@@ -199,6 +216,22 @@
 }
 
 #cancelDelete:hover {
+    background-color: #ececec;
+}
+
+#cancelDelete3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bolder;
+    color: #221D7E;
+    background-color: #FFFFF3;
+    border: 0.5px solid #221D7E;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+#cancelDelete3:hover {
     background-color: #ececec;
 }
 
@@ -360,4 +393,31 @@ select {
 .modal-body .value td{
     margin: 0;
     text-align: left !important;
+}
+
+p{
+    padding-left: 8rem;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ikkatu{
+    height: 250px;
+    overflow-y: auto;
+}
+
+.ikkatu::-webkit-scrollbar {
+    background: #E6E7F5;
+    width:10px;
+}
+
+.ikkatu::-webkit-scrollbar-thumb{
+    background-color: #AAAAAA;
+    border-radius: 20px;
+    width:10px;
+}
+
+.ikkatu::-webkit-scrollbar-thumb:hover {
+    background-color: #776378;
 }

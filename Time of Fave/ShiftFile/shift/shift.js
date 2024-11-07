@@ -1,6 +1,7 @@
 // モーダル要素の取得
 const bulkAddModal = document.getElementById('easyModal');
 const deleteConfirmModal = document.getElementById('easyModal2');
+const confirmAddModal = document.getElementById('easyModal3'); // easyModal3を取得
 
 // ボタン要素の取得
 const bulkAddButton = document.getElementById('modalOpen'); // 「一括追加」ボタン
@@ -10,7 +11,11 @@ const deleteButton = document.getElementById('deleteButton'); // 「削除確認
 const bulkAddConfirmButton = document.getElementById('confirmDelete'); // 「登録」ボタン（追加モーダル内）
 const bulkAddCancelButton = document.getElementById('cancelDelete'); // 「キャンセル」ボタン（追加モーダル内）
 const deleteConfirmButton = document.getElementById('confirmDelete2'); // 「削除」ボタン（削除モーダル内）
-const deleteCancelButton = document.getElementById('cancelDelete'); // 「キャンセル」ボタン（削除モーダル内）
+const deleteCancelButton = document.getElementById('cancelDelete2'); // 「キャンセル」ボタン（削除モーダル内）
+
+// easyModal3 の「削除」と「キャンセル」ボタンの取得
+const bulkAddButton2 = document.getElementById('confirmDelete3'); // 「削除」ボタン（easyModal3内）
+const bulkAddCancelButton2 = document.getElementById('cancelDelete3'); // 「キャンセル」ボタン（easyModal3内）
 
 // モーダルを開く関数
 function openModal(modal) {
@@ -33,10 +38,10 @@ deleteButton.addEventListener('click', function(event) {
     openModal(deleteConfirmModal);
 });
 
-// 「登録」ボタンがクリックされたら「一括追加」モーダルを閉じる
+// 「登録」ボタンがクリックされたら「一括追加」モーダルを閉じ、確認モーダル（easyModal3）を開く
 bulkAddConfirmButton.addEventListener('click', function() {
-    closeModal(bulkAddModal);
-    // 必要に応じて一括追加処理を実行するコードを追加できます
+    closeModal(bulkAddModal);  // 現在のモーダルを閉じる
+    openModal(confirmAddModal); // 確認モーダル（easyModal3）を開く
 });
 
 // 「削除」ボタンがクリックされたら「削除確認」モーダルを閉じる
@@ -55,6 +60,17 @@ deleteCancelButton.addEventListener('click', function() {
     closeModal(deleteConfirmModal);
 });
 
+// easyModal3の「削除」ボタンがクリックされたらモーダルを閉じる
+bulkAddButton2.addEventListener('click', function() {
+    closeModal(confirmAddModal);
+    // 必要に応じて削除処理を実行するコードを追加できます
+});
+
+// easyModal3の「キャンセル」ボタンがクリックされたらモーダルを閉じる
+bulkAddCancelButton2.addEventListener('click', function() {
+    closeModal(confirmAddModal);
+});
+
 // モーダル外をクリックしたときにモーダルを閉じる
 window.addEventListener('click', function(event) {
     if (event.target === bulkAddModal) {
@@ -63,7 +79,12 @@ window.addEventListener('click', function(event) {
     if (event.target === deleteConfirmModal) {
         closeModal(deleteConfirmModal);
     }
+    if (event.target === confirmAddModal) { // easyModal3も閉じられるように追加
+        closeModal(confirmAddModal);
+    }
 });
+
+
 
 // ファイル選択後にファイル名を表示する関数
 function updateFileName() {
