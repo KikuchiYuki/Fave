@@ -1,45 +1,55 @@
-// モーダルを開く関数
-function openModal(itemId, title, price) {
-    const modal = document.getElementById('modal');
-    const modalContentText = document.getElementById('modal-content-text');
-    
-    // モーダルに表示する内容を設定
-    modalContentText.innerHTML = `
-        <strong>${title}</strong><br>
-        価格: ${price}
-    `;
+function toggleModal(modalId, displayStyle) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = displayStyle; // 指定された表示スタイルを適用
+    }
+}
 
-    modal.style.display = "flex"; // モーダルを表示
+// モーダルを開く関数
+function openModal() {
+    toggleModal('openModal', 'flex'); // モーダルを表示
 }
 
 // モーダルを閉じる関数
 function closeModal() {
-    const modal = document.getElementById('modal');
-    if (modal) {
-        modal.style.display = "none"; // モーダルを非表示
-    }
+    toggleModal('openModal', 'none'); // モーダルを非表示
 }
 
-// モーダルを閉じるボタンの取得とイベントリスナーの追加
-const buttonCancel = document.getElementById('modalClose');
-if (buttonCancel) {
-    buttonCancel.addEventListener('click', closeModal);
-} else {
-    console.error("閉じるボタンが見つかりません。modalClose IDを確認してください。");
+// 削除用モーダルを開く関数
+function openDeleteModal() {
+    toggleModal('deleteModal', 'flex'); // 削除モーダルを表示
 }
 
-// モーダル外をクリックしたときにモーダルを閉じる
-document.addEventListener('click', function(e) {
-    const modal = document.getElementById('modal');
-    if (e.target === modal) {
+// 削除用モーダルを閉じる関数
+function closeDeleteModal() {
+    toggleModal('deleteModal', 'none'); // 削除モーダルを非表示
+}
+
+function confirmDelete() {
+    // ここに削除処理を追加する場合は記述
+    // 例: アイテムの削除処理
+
+    // goods.htmlをリロード
+    window.location.href = 'goods.html';
+}
+
+// 閉じるボタンにイベントリスナーを設定
+document.getElementById("mClose").addEventListener("click", closeModal);
+
+// モーダルの外側をクリックした場合も閉じる
+window.onclick = function(event) {
+    const openModal = document.getElementById("openModal");
+    const deleteModal = document.getElementById("deleteModal");
+    if (event.target === openModal) {
         closeModal();
+    } else if (event.target === deleteModal) {
+        closeDeleteModal();
     }
-});
+};
 
 // アイコン画像をクリックして右側に移動させる関数
 function moveToPurchased(event, itemId) {
     event.stopPropagation(); // 親要素のクリックイベントをキャンセル
-
     const item = document.getElementById(itemId);
     const itemClone = item.cloneNode(true); // アイテムを複製
 
