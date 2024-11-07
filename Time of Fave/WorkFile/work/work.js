@@ -1,36 +1,47 @@
 // ボタンとモーダルの取得
-const buttonOpen = document.getElementById('modalOpen');
-const modal = document.getElementById('easyModal');
-const buttonCancel = document.getElementById('cancelDelete');
-const buttonConfirmDelete = document.getElementById('confirmDelete');
+const showModal1 = document.getElementById('showModal1');
+const showModal2 = document.getElementById('showModal2');
+const modal1 = document.getElementById('modal1');
+const modal2 = document.getElementById('modal2');
+const buttonCancel1 = document.getElementById('cancelDelete1');
+const buttonCancel2 = document.getElementById('cancelDelete2');
+const buttonConfirmDelete1 = document.getElementById('confirmDelete1');
+const buttonConfirmDelete2 = document.getElementById('confirmDelete2');
 
 // モーダルを開くイベントリスナー
-buttonOpen.addEventListener('click', modalOpen);
-function modalOpen() {
-  modal.style.display = 'block';
-}
-
-// モーダルを閉じるイベントリスナー
-buttonCancel.addEventListener('click', modalClose);
-function modalClose() {
-  modal.style.display = 'none';
-}
-
-// 削除確定イベントリスナー
-buttonConfirmDelete.addEventListener('click', confirmDelete);
-function confirmDelete() {
-  // ページ遷移する
-  window.location.href = '../login/login.html';
-}
-
-// キャンセルボタンをクリックしたらマイページに遷移する処理
-document.getElementById('cancelDeletePage').addEventListener('click', function() {
-  window.location.href = 'http://127.0.0.1:5500/Time%20of%20Fave/Time of Fave/WorkFile/work/work.html';
+showModal1.addEventListener('click', function() {
+    modal1.style.display = 'block';
 });
 
+showModal2.addEventListener('click', function() {
+    modal2.style.display = 'block';
+});
+
+// モーダルを閉じるイベントリスナー
+buttonCancel1.addEventListener('click', function() {
+    modal1.style.display = 'none';
+});
+
+buttonCancel2.addEventListener('click', function() {
+    modal2.style.display = 'none';
+});
+
+// 削除確定イベントリスナー
+// buttonConfirmDelete1.addEventListener('click', function() {
+//     window.location.href = '../login/login.html';
+// });
+
+buttonConfirmDelete1.addEventListener('click',ConfirmDelete1);
+function ConfirmDelete1() {
+    modal2.style.display = 'none';
+}
+
 // モーダル外をクリックしたときにモーダルを閉じる
-document.addEventListener('click', function(e) {
-  if (e.target === modal) {
-    modalClose();
-  }
+window.addEventListener('click', function(e) {
+    if (e.target === modal1) {
+        modal1.style.display = 'none';
+    }
+    if (e.target === modal2) {
+        modal2.style.display = 'none';
+    }
 });

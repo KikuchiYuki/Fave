@@ -182,7 +182,7 @@ input[type="radio"] {
     font-weight: bold;
     margin-top: 3%;
     color: #221D7E;
-    background-color: #63ACF6;
+    background-color: #C3F8B9;
     border: 0.5px solid #221D7E;
     border-radius: 5px;
     padding: 5px 40px;
@@ -190,7 +190,7 @@ input[type="radio"] {
 }
 
 #confirmRe:hover {
-    background-color: #98c5f3;
+    background-color: #ddfbd7;
 }
 
 /* キャンセルボタン */
@@ -490,7 +490,7 @@ td {
     font-weight: bold;
     margin-top: 3%;
     color: #221D7E;
-    background-color: #63ACF6;
+    background-color: #C3F8B9;
     border: 0.5px solid #221D7E;
     border-radius: 5px;
     padding: 5px 40px;
@@ -498,7 +498,7 @@ td {
 }
 
 .in:hover {
-    background-color: #98c5f3;
+    background-color: #ddfbd7;
 }
 
 .kyan {

@@ -194,6 +194,20 @@ h2 {
 }
 
 
+/* 削除ボタンとキャンセルボタン */
+#confirmDelete, #cancelDelete {
+    font-family: "Noto Serif JP", serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 5px 40px;
+    background-color: #FF6666;
+    border-radius: 3px;
+    margin-right: 3%;
+    height: 100%;
+    border: #221D7E 0.5px solid;
+
+}
+
 #confirmDelete:hover {
     background-color: #ff8787;
 }
@@ -211,6 +225,8 @@ h2 {
     text-decoration: none;
     height: 100%;
     border: none;
+    border: #221D7E 0.5px solid;
+
 }
 
 #cancelDelete:hover {
@@ -219,12 +235,16 @@ h2 {
 
 .btn{
     margin-left: 20px;
+    border: #221D7E 0.5px solid;
+    margin: 0.2px;
 }
 
 #container_btn .modalOpen{
     margin: 30px;
 }
 
-.btn {
-    margin: 0.2px;
+.modal-body .btn {
+    border: #221D7E 0.5px solid;
+
+
 }

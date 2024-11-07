@@ -291,3 +291,6 @@ select {
     width: 3.5rem;
     border-radius: 5px;
 }
+.img_icon img:hover{
+    opacity: 0.7;
+}
