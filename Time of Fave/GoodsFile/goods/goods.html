@@ -92,6 +92,7 @@
                             <span class="purchase-text">
                                 <span>購入したら</span><br>
                                 <span>クリック</span>
+                                <div class="arrow">▼</div> <!-- 下向き矢印を直接追加 -->
                             </span>
                             <a href="../goods_add/goods_add.html">
                                 <img src="../../img/ADD.png" alt="ADD" class="add-icon">
@@ -229,6 +230,7 @@
                             <span class="purchase-text-1">
                                 <span>未購入なら</span><br>
                                 <span>クリック</span>
+                                <div class="arrow-right">▼</div> <!-- 下向き矢印を直接追加 -->
                             </span>
                         </div>
                         </span>
@@ -264,7 +266,7 @@
                             <div class="container">
                                 <div class="hi-img-right">
                                     <p>~11/16</p>
-                                    <img src="../../img/購入済.png" alt="I">
+                                    <img src="../../img/購入済.png" alt="I" class="purchase-icon">
                                 </div>
                                 <div class="inf-meter">
                                     <div class="name-container">
@@ -400,24 +402,71 @@
 
     <!-- モーダルウィンドウ -->
     <!-- 共通のモーダル -->
-    <div id="modal" class="modal">
+    <div id="openModal" class="modal">
         <div class="modal-content">
             <img src="../../img/Y_A.png" alt="Y_A" class="modal-image">
-            <p id="modal-content-text">アイテムの詳細がここに表示されます。</p>
+            <p id="modal-content-text"></p>
             <div id="modal-details">
-                <!-- モーダルの内容がここに表示される -->
+                <table>
+                    <tr>
+                        <td>グッズ：</td>
+                        <td class="value">アクリルスタンド</td>
+                    </tr>
+                    <tr>
+                        <td>金額(円)：</td>
+                        <td class="value">￥1,980</td>
+                    </tr>
+                    <tr>
+                        <td>推し：</td>
+                        <td class="value">カンパネルラ</td>
+                    </tr>
+                    <tr>
+                        <td>日付：</td>
+                        <td class="value">2024/11/16</td>
+                    </tr>
+                    <tr>
+                        <td class="memo-label">メモ：</td>
+                        <td class="value memo-value">ビジュがよき</td>
+                    </tr>
+                </table>
+                <div class="container btn">
+                    <div class="img_icon">
+                        <a href="../goods_edit/goods_edit.html"><img src="../../img/EDIT2.png"></a>
+                    </div>
+                    <div class="img_icon">
+                        <a href="#" onclick="openDeleteModal()"><img src="../../img/DELE2.png"></a>
+                    </div>
+                </div>
             </div>
-            <button id="modalClose" type="button" class="btn">閉じる</button>
+            <button id="mClose" type="button" class="btn">閉じる</button>
         </div>
     </div>
 
+    <!-- 削除用モーダル -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content-center">
+            <h3>本当に削除しますか？</h3>
+            <div class="delete-h4">
+                <h6>※消した後は二度と元に戻れません。</h6>
+            </div>
 
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal('modal2')">&times;</span>
-            <p>ミューズ STARMINE ver.4.0の詳細情報をここに記入します。</p>
+            <div class="delete-details">
+                <p><strong>日付：</strong>2024/11/16</p>
+                <p><strong>グッズ名：</strong>アクリルスタンド</p>
+                <p><strong>金額(円)：</strong>¥ 1,980</p>
+                <p class="priority-item">
+                    <strong>優先度：</strong>
+                    <img src="../../img/Y_A.png" alt="Y_A" class="priority-image">
+                </p>
+                <p><strong>推し：</strong>カンパネルラ</p>
+                <p><strong>メモ：</strong>ビジュがよき</p>
+            </div>
+
+            <button id="mDelete" type="button" class="btn delete-btn" onclick="confirmDelete()">削除</button>
+            <button id="mCancel" type="button" class="btn cancel-btn" onclick="closeDeleteModal()">キャンセル</button>
         </div>
     </div>
+
 
     <script src="goods.js"></script>
 

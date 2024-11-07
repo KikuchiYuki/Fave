@@ -151,7 +151,7 @@ h2 {
     font-size: 28px;
     color: #221D7E;
     margin-bottom: 10px;
-    font-weight: 800;
+    font-weight: 900;
     text-align: center; /* h3も中央寄せ */
 }
 .modal-h4{
@@ -182,7 +182,7 @@ h2 {
 #confirmDelete {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
-    font-weight: bold;
+    font-weight: 900;
     margin-top: 3%;
     color: #221D7E;
     border-radius: 3px;
@@ -192,6 +192,7 @@ h2 {
     height: 100%;
     border: none;
 }
+
 
 /* 削除ボタンとキャンセルボタン */
 #confirmDelete, #cancelDelete {
@@ -215,7 +216,7 @@ h2 {
 #cancelDelete {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
-    font-weight: bolder;
+    font-weight: 900;
     margin-top: 3%;
     color: #221D7E;
     background-color: #FFFFF3;
