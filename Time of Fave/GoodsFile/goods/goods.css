@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 
 .main {
@@ -172,7 +173,7 @@
 
 .status {
     text-align: center; /* 中央揃え */
-    font-weight: 900; /* 太字 */
+    font-weight: 700; /* 太字 */
     font-size: 36px;
     margin: 0; /* マージンをリセット */
     margin-top: 1px; /* 負のマージンを削除 */
@@ -207,7 +208,7 @@
 .osi-na-pri p {
     text-align: center;
     margin-top: 2%;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 18px;
     z-index: 2; /* 線の上に表示 */
 }
@@ -237,7 +238,7 @@
 
 .meter-app .app {
     color: #FF1D1D;
-    font-weight: 900;
+    font-weight: 700;
     margin-top: 3%;
     width: 27%;
     text-align: center;
@@ -300,17 +301,17 @@
 }
 
 .osi {
-    font-weight: 900;
+    font-weight: 700;
     margin: 0; /* マージンをリセット */
 }
 
 .name {
-    font-weight: 900;
+    font-weight: 700;
     margin: 0; /* マージンをリセット */
 }
 
 .price {
-    font-weight: 900;
+    font-weight: 700;
     text-align: right; /* 値段を右揃えに */
     margin-left: 18%;
     font-size: 25px; /* 見やすいサイズに調整 */
@@ -341,7 +342,7 @@
 
 .purchase-text {
     color: #C80C0C;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 10px; /* フォントサイズを調整 */
     margin-right: auto; /* 自動で右側のマージンを設定 */
     text-align: center; /* 中央揃え */
@@ -366,7 +367,7 @@
 /* 右側のstatus-container内の要素を右揃えにする */
 .right-side .status-container {
     color: #C80C0C;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 10px; /* フォントサイズを調整 */
     margin-right: auto; /* 自動で右側のマージンを設定 */
     text-align: center; /* 中央揃え */
@@ -402,7 +403,7 @@
     border: 3px solid #221D7E;
     border-radius: 3.5px;
     position: fixed;
-    top: 53%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 42%;
@@ -412,18 +413,18 @@
     min-width: 600px;
     text-align: center; 
     font-size: 25px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 #mClose {
     font-family: "Noto Serif JP", serif;
-    font-size: 15px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
     margin-top: 24%;
     color: #221D7E;
     background-color: #FFFFF3;
     border-radius: 3px;
-    padding: 5px 20px;
+    padding: 10px 27px;
     text-decoration: none;
     border: none;
 }
@@ -545,11 +546,11 @@ table{
 #mDelete {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
-    font-weight: 900;
+    font-weight: 700;
     padding: 5px 40px;
     background-color: #FF6666;
     border-radius: 3px;
-    margin-right: 3%;
+    margin-right: 9%;
     height: 9%;
     color: #221D7E;
 }
@@ -562,8 +563,8 @@ table{
 #mCancel {
     font-family: "Noto Serif JP", serif;
     font-size: 19px;
-    font-weight: 900;
-    margin-top: 12%;
+    font-weight: 700;
+    margin-top: 6%;
     color: #221D7E;
     background-color: #FFFFF3;
     border-radius: 3px;
@@ -579,30 +580,45 @@ table{
 
 /* 詳細情報のスタイル */
 .delete-details {
-    font-size: 22px;
+    font-size: 19px;
     color: #221D7E;
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 8px;
-    width: 80%;
-    margin: 0 auto;
+    width: 60%; /* テーブル全体の幅を調整 */
+    margin-left: 25%;
+    margin-right: 15%;
+    justify-content: center;
 }
 
-.delete-details p {
-    margin: 8px 0;
-    line-height: 1.5;
+.delete-details table {
+    width: 100%;
+    margin: 0 auto; /* テーブル全体を中央に配置 */
+    border-collapse: collapse;
 }
 
-/* 優先度行のスタイル */
-.priority-item {
-    align-items: center; /* 中央揃え */
+.delete-details th, .delete-details td {
+    padding: 4px;
+    text-align: right; /* 各セル内の内容を中央揃え */
+    vertical-align: middle;
+}
+
+.delete-details td {
+    text-align: left !important;
+}
+
+.delete-details th {
+    width: 120px;
+    font-weight: 700;
 }
 
 .priority-image {
-    width: 40px; /* 画像サイズを調整 */
-    height: 40px;
-    margin-left: 8px; /* テキストとの間にスペース */
-    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%; /* 丸い形にする */
+    
 }
+
 
 .modal-content-center {
     background-color: #DADCFB;
@@ -613,11 +629,28 @@ table{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 42%;
-    height: 85%;
+    height: 83%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     padding: 26px;
     min-width: 600px;
     text-align: center; 
     font-size: 25px;
-    font-weight: 900;
+    font-weight: 700;
 }
+
+.modal-body table td {
+    width: 55%;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 4px;
+  }
+
+  td .text {
+    font-size: 9px;
+  }
+  
+  img {
+    cursor: pointer;
+  }
+
+

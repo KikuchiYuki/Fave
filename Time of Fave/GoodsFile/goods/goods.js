@@ -6,6 +6,14 @@ function toggleModal(modalId, displayStyle) {
 }
 
 // モーダルを開く関数
+function toggleModal(modalId, displayStyle) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = displayStyle; // 指定された表示スタイルを適用
+    }
+}
+
+// モーダルを開く関数
 function openModal() {
     toggleModal('openModal', 'flex'); // モーダルを表示
 }
@@ -27,7 +35,7 @@ function closeDeleteModal() {
 
 function confirmDelete() {
     // ここに削除処理を追加する場合は記述
-    // 例: アイテムの削除処理
+    // 例: アイテムの削除処理を行う
 
     // goods.htmlをリロード
     window.location.href = 'goods.html';
@@ -67,3 +75,37 @@ function moveToPurchased(event, itemId) {
     // 左側からアイテムを削除
     item.remove();
 }
+
+// 左から右に移動する関数
+function moveToPurchasedLeftToRight(event, itemId) {
+    const item = document.getElementById(itemId);
+    const rightSide = document.querySelector('.right-side');
+    
+    // 左側からアイテムを削除し、右側に移動
+    document.querySelector('.left-side').removeChild(item);
+    rightSide.appendChild(item);
+}
+
+// 右から左に移動する新しい関数
+function moveToLeftRightToLeft(event, itemId) {
+    const item = document.getElementById(itemId);
+    const leftSide = document.querySelector('.left-side');
+    
+    // 右側からアイテムを削除し、左側に移動
+    document.querySelector('.right-side').removeChild(item);
+    leftSide.appendChild(item);
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
