@@ -359,17 +359,36 @@ select {
   background-color: #FFFFF3;
 }
 
-.pl {
+.input-container{
   position: relative;
 }
 
-.pl::before {
-  content: attr(placeholder);
+.pl {
+  font-family: "Noto Serif JP", serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #FFFFF3;
+  border: 1px solid #221D7E;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #A9A8C2;
+  width: 20.5rem;
+  height: 40px;
+}
+.date-text {
+  font-family: "Noto Serif JP", serif;
   position: absolute;
-  bottom: 5px;
+  margin-left: 50px;
+  color: #A9A8C2;
+  background-color: #FFFFF3;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.pl::-webkit-datetime-edit-fields-wrapper {
+/* プレースホルダーを非表示にする */
+.pl:focus+.date-text{
   display: none;
 }
 
@@ -410,7 +429,8 @@ select {
 }
 
 .modal-header {
-  margin: 40px;
+  padding-top: 35px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
 }
@@ -456,7 +476,7 @@ select {
   font-family: "Noto Serif JP", serif;
   font-size: 19px;
   font-weight: bold;
-  margin-top: 3%;
+  margin-top: 5%;
   color: #221D7E;
   background-color: #C3F8B9;
   border: 0.5px solid #221D7E;
@@ -526,6 +546,7 @@ td .text {
   background-color: rgba(255, 224, 61, 1);
   padding: 5px 40px;
   margin-right: 5%;
+  margin-top: 6%;
 }
 
 #AddGoods:hover,
@@ -537,6 +558,7 @@ td .text {
 #ReEvents {
   background-color: #FFFFF3;
   padding: 5px 20px;
+  margin-top: 6%;
 }
 
 #ReGoods:hover,
@@ -571,7 +593,7 @@ td .text {
 }
 
 .modalbody input[type="text"] {
-  color: #66639C;
+  color: #A9A8C2;
   font-family: "Noto Serif JP", serif;
   height: 40px;
   border-radius: 3px;
