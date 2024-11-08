@@ -95,6 +95,11 @@ ul li:nth-child(odd) {
   align-items: center;
 }
 
+.close{
+  padding: 8px;
+  justify-self: end;
+}
+
 .accordion-button .container {
   display: flex;
   justify-content: space-between;
