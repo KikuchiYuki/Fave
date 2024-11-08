@@ -123,6 +123,7 @@
                                 </div>
                             </div>
                         </div>
+                        
 
                         <div class="event">
                             <div class="container" id="item2"
@@ -243,7 +244,7 @@
                             <div class="container">
                                 <div class="hi-img-right">
                                     <p>~11/16</p>
-                                    <img src="../../img/購入済.png" alt="H">
+                                    <img src="../../img/購入済.png" alt="購入済" onclick="moveToLeftRightToLeft(event, 'item2')">
                                 </div>
                                 <div class="inf-meter">
                                     <div class="name-container">
@@ -438,7 +439,7 @@
                     </div>
                 </div>
             </div>
-            <button id="mClose" type="button" class="btn">閉じる</button>
+            <button id="mClose" type="button" class="btn" onclick="closeButton()">閉じる</button>
         </div>
     </div>
 
@@ -451,16 +452,40 @@
             </div>
 
             <div class="delete-details">
-                <p><strong>日付：</strong>2024/11/16</p>
-                <p><strong>グッズ名：</strong>アクリルスタンド</p>
-                <p><strong>金額(円)：</strong>¥ 1,980</p>
-                <p class="priority-item">
-                    <strong>優先度：</strong>
-                    <img src="../../img/Y_A.png" alt="Y_A" class="priority-image">
-                </p>
-                <p><strong>推し：</strong>カンパネルラ</p>
-                <p><strong>メモ：</strong>ビジュがよき</p>
+                <table>
+                    <tr>
+                        <th>日付：</th>
+                        <td>2024/11/16</td>
+                    </tr>
+                    <tr>
+                        <th>グッズ名：</th>
+                        <td>アクリルスタンド</td>
+                    </tr>
+                    <tr>
+                        <th>金額(円)：</th>
+                        <td>¥ 1,980</td>
+                    </tr>
+                    <tr>
+                        <th>優先度：</th>
+                        <td><img src="../../img/Y_A.png" alt="Y_A" class="priority-image"></td>
+                    </tr>
+                    <tr>
+                        <th>推し：</th>
+                        <td>カンパネルラ</td>
+                    </tr>
+                    <tr>
+                        <th>メモ：</th>
+                        <td>ビジュがよき</td>
+                    </tr>
+                    <tr>
+                        <th>購入済：</th>
+                        <td><input type="checkbox" class="text">
+                            <span class="text">※購入済みの場合はチェックを入れてください。</span>
+                        </td>
+                    </tr>
+                </table>
             </div>
+
 
             <button id="mDelete" type="button" class="btn delete-btn" onclick="confirmDelete()">削除</button>
             <button id="mCancel" type="button" class="btn cancel-btn" onclick="closeDeleteModal()">キャンセル</button>
@@ -477,3 +502,4 @@
 </body>
 
 </html>
+
