@@ -1,15 +1,168 @@
 @charset "utf-8";
 
 .main {
-    width: 85%;
+  width: 90%;
+  margin-left: 10%;
+
 }
 
 .main .add {
-    width: 7%;
-    margin-left: 10%;
+  width: 7%;
+  margin-left: 10%;
 }
 
 .main .add:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
+.accordion {
+  width: 830px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 5px;
+}
+
+.accordion-button {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  margin: 0;
+  background-color: transparent;
+  color: #221D7E;
+  /* 余白をなくす */
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: 2px solid #221D7E;
+  /* ボーダーをテキストのすぐ下に */
+  cursor: pointer;
+  font-size: 23px;
+  line-height: 1.2;
+  /* 行間を詰めてボーダーが文字に近くなるように */
+  align-self: center;
+  /* ボタンを画像の上に揃える */
+  padding-left: 20px;
+}
+
+.accordion-content {
+  display: none;
+  /* 初期状態で非表示 */
+  border-radius: 5px;
+  padding-left: 10%;
+}
+
+.accordion-content.show {
+  display: block;
+  /* 'show'クラスが追加されると表示 */
+}
+
+ul {
+  width: 900px;
+  list-style: none;
+  font-size: 18px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  margin-right: 10%;
+}
+
+ul li:nth-child(odd) {
+  background-color: rgba(255, 255, 243, 57%);
+  /* 奇数番目のアイテムに背景色を設定 */
+}
+
+.vertical-line {
+  width: 0.2rem;
+  /* 縦棒の幅 */
+  height: 1.5rem;
+  /* 縦棒の高さ */
+  border-radius: 5px;
+  background-color: #221D7E;
+  /* 縦棒の色 */
+  margin: 10px;
+  /* 余白（オプション） */
+  margin-right: 30px;
+}
+
+.li {
+  text-align: center;
+  align-items: center;
+}
+
+.licon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-button .container {
+  display: flex;
+  justify-content: space-between;
+  /* テキストと画像を両端に配置 */
+  align-items: center;
+  /* 画像とテキストを縦方向に中央揃え */
+}
+
+.EDIT {
+  width: 4rem;
+}
+
+.DOWN {
+  width: 1.7rem;
+  display: flex;
+}
+
+.DELEbtn,button{
+  background-color: transparent !important;
+  /* 強制的に背景を透明に */
+  border: none;
+  /* 強制的にボーダーを削除 */
+  outline: none !important;
+  /* フォーカスアウトラインも削除 */
+  cursor: pointer;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.DELE {
+  margin-left: 20px;
+  width: 4rem;
+}
+
+.ADD{
+  height: 4rem;
+  width: 4rem;
+  margin-right: 10px;
+}
+
+.ADDcon{
+  display: flex;
+  justify-content: flex-start; /* 左寄せ */
+  align-items: flex-start; /* 上寄せ */
+}
+
+.ADDcon1{
+  display: flex;
+  justify-content: flex-start; /* 左寄せ */
+  align-items: flex-start; /* 上寄せ */
+}
+
+.libtn{
+  margin-right: 10%;
+}
+
+.libtn img{
+  width: 2.8rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.btnimg {
+  overflow: hidden; /* 親要素にoverflow:hiddenを追加 */
+  border-radius: 5px; /* 親要素にborder-radiusを追加 */
+}
+
+.btnimg img {
+  width: 100%; /* 画像が親要素にフィットするように */
+  height: 100%; /* 画像が親要素にフィットするように */
+  object-fit: cover; /* 画像の歪みを防ぐためにobject-fitを使用 */
+}
