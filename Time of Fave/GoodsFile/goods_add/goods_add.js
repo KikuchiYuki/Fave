@@ -127,3 +127,40 @@ window.addEventListener("click", function(event) {
     });
 });
 });
+
+
+
+
+function hidePlaceholder(input) {
+    const placeholder = input.nextElementSibling;
+    if (placeholder) placeholder.style.display = 'none';
+}
+
+function showPlaceholder(input) {
+    const placeholder = input.nextElementSibling;
+    if (!input.value && placeholder) {
+        placeholder.style.display = 'block';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dateInputs = document.querySelectorAll('input[type="date"]');
+    
+    dateInputs.forEach(input => {
+        const placeholder = input.nextElementSibling;
+        
+        // 初期表示の設定: inputが空ならプレースホルダーを表示
+        if (!input.value) {
+            placeholder.style.display = 'block';
+        }
+
+        // inputにフォーカスがあるときプレースホルダーを非表示
+        input.addEventListener('focus', () => hidePlaceholder(input));
+
+        // inputからフォーカスが外れたとき、入力がない場合にプレースホルダーを表示
+        input.addEventListener('blur', () => showPlaceholder(input));
+
+        // プレースホルダーをクリックするとinputにフォーカス
+        placeholder.addEventListener('click', () => input.focus());
+    });
+});
