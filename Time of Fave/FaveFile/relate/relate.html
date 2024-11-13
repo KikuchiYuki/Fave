@@ -112,9 +112,9 @@
                                                 <div class="vertical-line"></div>2号車組
                                             </div>
                                             <div class="container libtn">
-                                                <button type="button"><img class="btnimg"
+                                                <button type="button"><img class="btnimg EDIT2"
                                                         src="../../img/EDIT2.png"></button>
-                                                <button type="button"><img class="btnimg"
+                                                <button type="button"><img class="btnimg DELE2"
                                                         src="../../img/DELE2.png"></button>
                                             </div>
                                         </div>
@@ -125,9 +125,9 @@
                                                 <div class="vertical-line"></div>先頭車両組
                                             </div>
                                             <div class="container libtn">
-                                                <button type="button"><img class="btnimg"
+                                                <button type="button"><img class="btnimg EDIT2"
                                                         src="../../img/EDIT2.png"></button>
-                                                <button type="button"><img class="btnimg"
+                                                <button type="button"><img class="btnimg DELE2"
                                                         src="../../img/DELE2.png"></button>
                                             </div>
                                         </div>
@@ -138,9 +138,9 @@
                                                 <div class="vertical-line"></div>乗客組
                                             </div>
                                             <div class="container libtn">
-                                                <button type="button"><img class="btnimg"
+                                                <button type="button"><img class="btnimg EDIT2"
                                                         src="../../img/EDIT2.png"></button>
-                                                <button type="button"><img class="btnimg"
+                                                <button type="button"><img class="btnimg DELE2"
                                                         src="../../img/DELE2.png"></button>
                                             </div>
                                         </div>
@@ -159,7 +159,125 @@
                     </div>
                 </div>
 
+
+                <button type="button" class="ADD2con">
+                    <img class="ADD2" src="../../img/ADD.png">
+                </button>
             </div>
+
+
+
+
+
+            <!-- モーダルのHTML -->
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>所属/ 関連プロジェクト等</h4>
+                    </div>
+                    <h3>編集内容を入力してください</h3>
+                    <input type="text" placeholder="銀河鉄道の夜">
+
+                    <div class="modal-body">
+                        <button id="confirmEdit" type="button" class="btn">完了</button>
+                        <button id="cancel" type="button" class="btn close">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="editModal2" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>曲/チーム/組名等</h4>
+                    </div>
+                    <h3>編集内容を入力してください</h3>
+                    <input type="text" placeholder="2号車組">
+
+                    <div class="modal-body">
+                        <button id="confirmEdit2" type="button" class="btn">完了</button>
+                        <button id="cancel" type="button" class="btn close">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="deleteModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>所属/ 関連プロジェクト等</h4>
+                    </div>
+                    <h3>本当に削除しますか？</h3>
+                    <div class="deleword">
+                        <div class="line">
+                            <span class="asterisk">※</span>
+                            <span class="text">消した後は二度と元に戻せません。</span>
+                        </div>
+                        <div class="line">
+                            <span class="asterisk">※</span>
+                            <span class="text">対応するチーム/曲/組名等も削除されます。</span>
+                        </div>
+                    </div>
+                    
+                    <input type="text" placeholder="銀河鉄道の夜" readonly>
+
+                    <div class="modal-body">
+                        <button id="confirmDELE" type="button" class="btn">削除</button>
+                        <button id="cancel" type="button" class="btn close">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="deleteModal2" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>所属/ 関連プロジェクト等</h4>
+                    </div>
+                    <h3>本当に削除しますか？</h3>
+                    <div class="deleword">
+                        <div class="line">
+                            <span class="asterisk">※</span>
+                            <span class="text">消した後は二度と元に戻せません。</span>
+                        </div>
+                    </div>
+                    
+                    <input type="text" placeholder="銀河鉄道の夜" readonly>
+
+                    <div class="modal-body">
+                        <button id="confirmDELE2" type="button" class="btn">削除</button>
+                        <button id="cancel" type="button" class="btn close">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="addModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>曲/チーム/組名等</h4>
+                    </div>
+                    <h3>追加内容を入力してください</h3>
+                    <input type="text" placeholder="曲/チーム/組名等を入力してください。">
+
+                    <div class="modal-body">
+                        <button id="confirmAdd" type="button" class="btn">追加</button>
+                        <button id="cancel" type="button" class="btn close">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="addModal2" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>所属/ 関連プロジェクト等</h4>
+                    </div>
+                    <h3>追加内容を入力してください</h3>
+                    <input type="text" placeholder="所属/関連プロジェクト等を入力してください。">
+
+                    <div class="modal-body">
+                        <button id="confirmAdd2" type="button" class="btn">追加</button>
+                        <button id="cancel" type="button" class="btn close">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+
 </body>
 
 <script src="relate.js"></script>
