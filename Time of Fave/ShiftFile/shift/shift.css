@@ -395,7 +395,7 @@ select {
     text-align: left !important;
 }
 
-p{
+.modal-body p{
     padding-left: 8rem;
     text-align: left;
     font-size: 20px;

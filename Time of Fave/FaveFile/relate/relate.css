@@ -7,8 +7,8 @@
 }
 
 .main .add {
-  width: 7%;
-  margin-left: 10%;
+  width: 30% !important;
+  margin-left: 50% !important;
 }
 
 .main .add:hover {
