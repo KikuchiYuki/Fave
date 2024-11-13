@@ -142,17 +142,18 @@ input[type=radio] {
 
 input[type="text"],
 input[type="date"],
-textarea.memo {
-  color: #66639C;
+textarea.memo,
+.pl {
+  color: #A9A8C2;
   font-family: "Noto Serif JP", serif;
   height: 40px;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 20px;
   width: 400px;
   padding: 8px;
   box-sizing: border-box;
   border: 0.5px solid #221D7E;
-  background: rgba(255, 255, 243, 1);
+  background: #FFFFF3;
 }
 
 textarea.memo {
@@ -163,12 +164,16 @@ textarea.memo {
   min-height: 100px;
 }
 
+input::placeholder, textarea::placeholder{
+  color: #A9A8C2;
+  font-size: 20px;
+}
 
 .form-group {
   font-size: 20px;
   text-align: left;
   display: flex;
-  margin: 1% auto;
+  margin: 2% auto;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -311,25 +316,15 @@ input[type="checkbox"] {
 
 
 
+select,
 .custom-file-select {
-  width: 20.5rem;
-  color: #66639C;
-  margin-left: 6px;
-  text-align: left;
-  border-radius: 5px;
+  color: #A9A8C2;
   appearance: none;
-  padding: 5px 0 5px 5px;
-  font-size: 16px;
-  border: #221D7E 0.5px solid;
+  font-family: "Noto Serif JP", serif;
+  font-size: 20px;
   border-radius: 5px;
-  background-color: #FFFFFF;
-  background-image: url('../../img/UPLOAD.png');
-  /* カスタム矢印の画像 */
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  /* 矢印の位置 */
-  background-size: 15px;
-  /* 矢印のサイズ */
+  border: 0.5px solid #221D7E;
+  background-color: #FFFFF3;
 }
 
 option {
@@ -337,26 +332,23 @@ option {
 }
 
 select {
-  color: #66639C;
-  border-radius: 5px;
-  appearance: none;
   width: 400px;
   height: 40px;
-  font-family: "Noto Serif JP", serif;
-  padding: 5px;
-  padding-left: 8px;
-  font-size: 18px;
-  border: #221D7E 0.5px solid;
-  border-radius: 5px;
+  padding: 0 8px;
   background-image: url('../../img/DOWN.png');
-  /* カスタム矢印の画像 */
   background-repeat: no-repeat;
   background-position: right 10px center;
-  /* 矢印の位置 */
   background-size: 15px;
-  /* 矢印のサイズ */
+  align-items: center;
+}
 
-  background-color: #FFFFF3;
+.custom-file-select {
+  width: 20.5rem;
+  margin-left: 6px;
+  background-image: url('../../img/UPLOAD.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
 }
 
 .input-container{
