@@ -96,6 +96,7 @@ ul li:nth-child(odd) {
 }
 
 .close{
+  cursor: pointer;
   padding: 8px;
   justify-self: end;
 }
@@ -170,4 +171,296 @@ ul li:nth-child(odd) {
   width: 100%; /* 画像が親要素にフィットするように */
   height: 100%; /* 画像が親要素にフィットするように */
   object-fit: cover; /* 画像の歪みを防ぐためにobject-fitを使用 */
+}
+
+
+.ADD2con{
+  position: fixed;         /* 画面の固定配置 */
+  bottom: 50px;            /* 画面の下から20pxの位置 */
+  right: 60px;             /* 画面の右から20pxの位置 */
+  border-radius: 50%;      /* 丸いボタン */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: solid 1px #CB5B00;
+  object-fit: contain}
+
+.ADD2con img{
+  width: 5rem !important;
+  object-fit: contain;
+}
+
+
+/* モーダルの初期状態を非表示にする */
+.modal {
+  display: none;
+  /* 初期状態では表示しない */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 背景の半透明黒 */
+}
+
+/* モーダル全体の中央揃え */
+.modal-content {
+  background-color: #DADCFB;
+  border: 3px solid #221D7E;
+  border-radius: 3.5px;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 53%;
+  height: 55%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  padding: 20px;
+  min-width: 500px;
+  text-align: center;
+  /* モーダル全体のテキストを中央寄せ */
+  padding-bottom: 30px;
+}
+
+.modal-header {
+  text-align: center;
+  /* テキストを中央揃え */
+  padding-top: 40px;
+  margin: 0 auto;
+  /* margin-bottom: 20px; */
+}
+
+
+h4{
+  font-size: 28px;
+    color: #221D7E;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+h5 {
+  font-size: 1rem;
+  color: #FF1212;
+}
+
+.deleword {
+  margin-top: 10px;
+  text-align: center; /* 全体を中央揃え */
+  color: #FF1212; /* 全体の文字色を統一 */
+  font-weight: 700;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: 20px 330px; /* 米印とテキストの幅を調整 */
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* 米印とテキストの間に余白を追加 */
+  margin: 5px 0; /* 行間の余白を調整 */
+}
+
+.asterisk {
+  text-align: right; /* 米印を右に寄せる */
+  font-weight: bold;
+}
+
+.text {
+  text-align: left; /* テキストを左に寄せる */
+}
+
+
+input[type="text"] {
+  font-size: 18px;
+  color: #221D7E;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  height: 40px;
+  width: 22.5rem;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #FFFFF3;
+}
+
+#deleteModal input[type="text"] {
+  font-size: 18px;
+  color: #221D7E;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  height: 40px;
+  width: 22.5rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-left: 12px;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #FFFFF3;
+}
+#deleteModal2 input[type="text"] {
+  font-size: 18px;
+  color: #221D7E;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  height: 40px;
+  width: 22.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #FFFFF3;
+}
+
+input[type="text"]::placeholder{
+  font-size: 18px;
+  color: #221D7E;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  height: 40px;
+  width: 20rem;
+}
+
+
+#addModal input[type="text"]::placeholder{
+  font-size: 18px;
+  color: #A9A8C2;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  height: 40px;
+  width: 20rem;
+}
+#addModal2 input[type="text"]::placeholder{
+  font-size: 15px;
+  color: #A9A8C2;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  height: 40px;
+  width: 20rem;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  /* ボタンを中央に揃える */
+  gap: 15px;
+  /* ボタンの間隔 */
+  padding-top: 20px;
+}
+
+#cancel{
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bolder;
+  color: #221D7E;
+  background-color: #FFFFF3 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 20px !important;
+  text-decoration: none;
+}
+
+#cancelDelete:hover {
+  background-color: #ececec;
+}
+
+#confirmEdit {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #C3F8B9 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px !important;
+  margin-right: 3%;
+}
+#confirmEdit:hover {
+  background-color: #ddfbd7;
+}
+#confirmEdit2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #C3F8B9 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px !important;
+  margin-right: 3%;
+}
+#confirmEdit2:hover {
+  background-color: #ddfbd7;
+}
+
+#confirmAdd {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #63ACF6 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px !important;
+  margin-right: 3%;
+}
+#confirmAdd:hover {
+  background-color: #98c5f3;
+}
+#confirmAdd2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #63ACF6 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px !important;
+  margin-right: 3%;
+}
+
+#confirmAdd2:hover {
+  background-color: #98c5f3;
+}
+
+#confirmDELE {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #FF6666 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px !important;
+  margin-right: 3%;
+}
+#confirmDELE:hover {
+  background-color: #ff8787 !important;
+}
+#confirmDELE2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 3%;
+  color: #221D7E;
+  background-color: #FF6666 !important;
+  border: 0.5px solid #221D7E;
+  border-radius: 5px;
+  padding: 5px 40px !important;
+  margin-right: 3%;
+}
+#confirmDELE2:hover {
+  background-color: #ff8787 !important;
 }
