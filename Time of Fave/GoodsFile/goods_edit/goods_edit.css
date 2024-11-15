@@ -26,7 +26,6 @@ body {
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  /* width: calc(100% - 34px); */
 }
 
 .switch_label {
@@ -57,7 +56,6 @@ body {
 }
 
 .title {
-  /* margin-left: 4px; */
   font-weight: 900;
   font-size: 17px;
   color: #221D7E;
@@ -83,7 +81,6 @@ input:checked~.base .circle {
   transform: translateX(100%);
   background: rgba(30, 183, 36, 1);
 }
-
 
 .toggle-container .note {
   color: rgba(255, 18, 18, 1);
@@ -123,7 +120,6 @@ input:checked~.base .circle {
   display: flex;
   width: 130px;
   border-radius: 100px;
-  /* display: block; */
   margin: 0 20px;
 }
 
@@ -164,7 +160,8 @@ textarea.memo {
   min-height: 100px;
 }
 
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
   color: #A9A8C2;
   font-size: 20px;
 }
@@ -226,7 +223,6 @@ input[type="checkbox"] {
   margin-bottom: 5%;
 }
 
-
 .btn {
   text-align: center;
   width: 100%;
@@ -272,8 +268,6 @@ input[type="checkbox"] {
   white-space: noweap;
 }
 
-
-
 .btn-plus {
   margin: 0;
   padding: 0;
@@ -313,9 +307,6 @@ input[type="checkbox"] {
   /* 高さは自動調整 */
 }
 
-
-
-
 select,
 .custom-file-select {
   color: #A9A8C2;
@@ -351,7 +342,7 @@ select {
   background-size: 15px;
 }
 
-.input-container{
+.input-container {
   position: relative;
 }
 
@@ -368,6 +359,7 @@ select {
   width: 20.5rem;
   height: 40px;
 }
+
 .date-text {
   font-family: "Noto Serif JP", serif;
   position: absolute;
@@ -380,7 +372,7 @@ select {
 }
 
 /* プレースホルダーを非表示にする */
-.pl:focus+.date-text{
+.pl:focus+.date-text {
   display: none;
 }
 
@@ -462,7 +454,6 @@ select {
   margin-left: 4px;
 }
 
-
 #confirmReGoods,
 #confirmReEvents {
   font-family: "Noto Serif JP", serif;
@@ -484,7 +475,6 @@ select {
 #confirmReEvents:hover {
   background-color: #ddfbd7;
 }
-
 
 #cancelReGoods,
 #cancelReEvents {
