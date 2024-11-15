@@ -84,33 +84,82 @@
 
         <div class="main scroll-box">
             <div class="scroll-content">
-                <!-- ➀切り替えボタン -->
-                <div class="buttons">
 
-                    <!-- ➁ボタン単体 -->
-                    <button class="button" id="a_btn">Aボタン</button>
-                    <button class="button" id="b_btn">Bボタン</button>
-
+                <div class="toggle-container">
+                    <label for="switch" class="switch_label">
+                        <div class="switch">
+                            <input type="checkbox" id="switch" />
+                            <div class="base">
+                                <div class="circle container">
+                                    <div class="gallery"><img src="../../img/table-cells-solid.png" alt="gallery"></div>
+                                    <div class="list"><img src="../../img/list-ul-solid.png" alt="list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
 
-                <!-- ➂切り替え画面 -->
-                <div class="screen">
+                <div id="gallery">
+                    <div class="container">
+                        <a class="a00" href="../fave_add/fave_add.html">
+                            <div class="add0">
+                                <img src="../../img/ADD.png" alt="FaveAdd">
+                            </div>
+                        </a>
 
-                    <!-- ➃A画面 -->
-                    <div class="a_screen">
-                        <p>Aの画面です</p>
+                        <a href="../fave_detaile/fave_detaile.html">
+                            <div class="card__item">
+                                <div class="card_img">
+                                    <img src="../../img/com.jpg" alt="カンパネルラ">
+                                </div>
+                                <p>カンパネルラ</p>
+                            </div>
+                        </a>
+                        
+                        <a href="../fave_detaile/fave_detaile.html">
+                            <div class="card__item">
+                                <div class="card_img">
+                                    <img src="../../img/myu.jpg" alt="ミューズ">
+                                </div>
+                                <p>ミューズ</p>
+                            </div>
+                        </a>
                     </div>
-
-                    <!-- ➄B画面 -->
-                    <div class="b_screen">
-                        <p>Bの画面です</p>
-                    </div>
-
                 </div>
+
+                <div id="list">
+                    <div class="add1">
+                        <a href="../fave_add/fave_add.html"><img src="../../img/ADD.png" alt="Add"></a>
+                    </div>
+
+                    <a href="../fave_detaile/fave_detaile.html">
+                        <div class="list_card container">
+                            <div class="card_img">
+                                <img src="../../img/com.jpg" alt="カンパネルラ">
+                            </div>
+                            <h3 class="name">カンパネルラ</h3>
+                            <h4 class="rela">/ 銀河鉄道の夜　2号車組</h4>
+                            <h2 class="price">¥21,600</h2>
+                        </div>
+                    </a>
+
+                    <a href="../fave_detaile/fave_detaile.html">
+                        <div class="list_card container">
+                            <div class="card_img">
+                                <img src="../../img/myu.jpg" alt="ミューズ">
+                            </div>
+                            <h3 class="name">ミューズ</h3>
+                            <h4 class="rela">/ STAR★BURST★SHIP　流星のキセキ</h4>
+                            <h2 class="price">¥13,500</h2>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
 
     </div>
+    <script src="fave.js"></script>
 </body>
 
 <footer>
