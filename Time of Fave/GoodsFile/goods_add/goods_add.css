@@ -26,7 +26,6 @@ body {
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  /* width: calc(100% - 34px); */
 }
 
 .switch_label {
@@ -57,7 +56,6 @@ body {
 }
 
 .title {
-  /* margin-left: 4px; */
   font-weight: 900;
   font-size: 17px;
   color: #221D7E;
@@ -123,7 +121,6 @@ input:checked~.base .circle {
   display: flex;
   width: 130px;
   border-radius: 100px;
-  /* display: block; */
   margin: 0 20px;
 }
 
@@ -139,16 +136,6 @@ input[type=radio]:checked+img {
 input[type=radio] {
   display: none;
 }
-
-
-/* input, textareaのプレースホルダーの色を統一 */
-/* input::placeholder,
-textarea::placeholder {
-  color: #A9A8C2;
-  font-family: "Noto Serif JP", serif;
-  font-size: 20px;
-} */
-
 
 input[type="text"],
 input[type="date"],
@@ -174,7 +161,8 @@ textarea.memo {
 }
 
 
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
   color: #A9A8C2;
   font-size: 20px;
 }
@@ -625,4 +613,3 @@ td .text {
   vertical-align: top;
   text-align: right;
 }
-
