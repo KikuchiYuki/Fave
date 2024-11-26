@@ -89,13 +89,13 @@ ul li:nth-child(odd) {
   align-items: center;
 }
 
-.licon{
+.licon {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.close{
+.close {
   cursor: pointer;
   padding: 8px;
   justify-self: end;
@@ -118,7 +118,8 @@ ul li:nth-child(odd) {
   display: flex;
 }
 
-.DELEbtn,button{
+.DELEbtn,
+button {
   background-color: transparent !important;
   /* 強制的に背景を透明に */
   border: none;
@@ -129,64 +130,79 @@ ul li:nth-child(odd) {
   padding: 0 !important;
   margin: 0 !important;
 }
+
 .DELE {
   margin-left: 20px;
   width: 4rem;
 }
 
-.ADD{
+.ADD {
   height: 4rem;
   width: 4rem;
   margin-right: 10px;
 }
 
-.ADDcon{
+.ADDcon {
   display: flex;
-  justify-content: flex-start; /* 左寄せ */
-  align-items: flex-start; /* 上寄せ */
+  justify-content: flex-start;
+  /* 左寄せ */
+  align-items: flex-start;
+  /* 上寄せ */
 }
 
-.ADDcon1{
+.ADDcon1 {
   display: flex;
-  justify-content: flex-start; /* 左寄せ */
-  align-items: flex-start; /* 上寄せ */
+  justify-content: flex-start;
+  /* 左寄せ */
+  align-items: flex-start;
+  /* 上寄せ */
 }
 
-.libtn{
+.libtn {
   margin-right: 10%;
 }
 
-.libtn img{
+.libtn img {
   width: 2.8rem;
   padding: 5px;
   border-radius: 10px;
 }
 
 .btnimg {
-  overflow: hidden; /* 親要素にoverflow:hiddenを追加 */
-  border-radius: 5px; /* 親要素にborder-radiusを追加 */
+  overflow: hidden;
+  /* 親要素にoverflow:hiddenを追加 */
+  border-radius: 5px;
+  /* 親要素にborder-radiusを追加 */
 }
 
 .btnimg img {
-  width: 100%; /* 画像が親要素にフィットするように */
-  height: 100%; /* 画像が親要素にフィットするように */
-  object-fit: cover; /* 画像の歪みを防ぐためにobject-fitを使用 */
+  width: 100%;
+  /* 画像が親要素にフィットするように */
+  height: 100%;
+  /* 画像が親要素にフィットするように */
+  object-fit: cover;
+  /* 画像の歪みを防ぐためにobject-fitを使用 */
 }
 
 
-.ADD2con{
-  position: fixed;         /* 画面の固定配置 */
-  bottom: 50px;            /* 画面の下から20pxの位置 */
-  right: 60px;             /* 画面の右から20pxの位置 */
-  border-radius: 50%;      /* 丸いボタン */
+.ADD2con {
+  position: fixed;
+  /* 画面の固定配置 */
+  bottom: 50px;
+  /* 画面の下から20pxの位置 */
+  right: 60px;
+  /* 画面の右から20pxの位置 */
+  border-radius: 50%;
+  /* 丸いボタン */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   border: solid 1px #CB5B00;
-  object-fit: contain}
+  object-fit: contain
+}
 
-.ADD2con img{
+.ADD2con img {
   width: 5rem !important;
   object-fit: contain;
 }
@@ -234,13 +250,14 @@ ul li:nth-child(odd) {
 }
 
 
-h4{
+h4 {
   font-size: 28px;
-    color: #221D7E;
-    margin-bottom: 10px;
-    font-weight: 800;
-    text-align: center;
+  color: #221D7E;
+  margin-bottom: 10px;
+  font-weight: 800;
+  text-align: center;
 }
+
 h5 {
   font-size: 1rem;
   color: #FF1212;
@@ -248,27 +265,34 @@ h5 {
 
 .deleword {
   margin-top: 10px;
-  text-align: center; /* 全体を中央揃え */
-  color: #FF1212; /* 全体の文字色を統一 */
+  text-align: center;
+  /* 全体を中央揃え */
+  color: #FF1212;
+  /* 全体の文字色を統一 */
   font-weight: 700;
 }
 
 .line {
   display: grid;
-  grid-template-columns: 20px 330px; /* 米印とテキストの幅を調整 */
+  grid-template-columns: 20px 330px;
+  /* 米印とテキストの幅を調整 */
   justify-content: center;
   align-items: center;
-  gap: 5px; /* 米印とテキストの間に余白を追加 */
-  margin: 5px 0; /* 行間の余白を調整 */
+  gap: 5px;
+  /* 米印とテキストの間に余白を追加 */
+  margin: 5px 0;
+  /* 行間の余白を調整 */
 }
 
 .asterisk {
-  text-align: right; /* 米印を右に寄せる */
+  text-align: right;
+  /* 米印を右に寄せる */
   font-weight: bold;
 }
 
 .text {
-  text-align: left; /* テキストを左に寄せる */
+  text-align: left;
+  /* テキストを左に寄せる */
 }
 
 
@@ -303,6 +327,7 @@ input[type="text"] {
   box-sizing: border-box;
   background-color: #FFFFF3;
 }
+
 #deleteModal2 input[type="text"] {
   font-size: 18px;
   color: #221D7E;
@@ -319,7 +344,7 @@ input[type="text"] {
   background-color: #FFFFF3;
 }
 
-input[type="text"]::placeholder{
+input[type="text"]::placeholder {
   font-size: 18px;
   color: #221D7E;
   font-family: "Noto Serif JP", serif;
@@ -329,7 +354,7 @@ input[type="text"]::placeholder{
 }
 
 
-#addModal input[type="text"]::placeholder{
+#addModal input[type="text"]::placeholder {
   font-size: 18px;
   color: #A9A8C2;
   font-family: "Noto Serif JP", serif;
@@ -337,7 +362,8 @@ input[type="text"]::placeholder{
   height: 40px;
   width: 20rem;
 }
-#addModal2 input[type="text"]::placeholder{
+
+#addModal2 input[type="text"]::placeholder {
   font-size: 15px;
   color: #A9A8C2;
   font-family: "Noto Serif JP", serif;
@@ -355,7 +381,7 @@ input[type="text"]::placeholder{
   padding-top: 20px;
 }
 
-#cancel{
+#cancel {
   font-family: "Noto Serif JP", serif;
   font-size: 19px;
   font-weight: bolder;
@@ -383,9 +409,11 @@ input[type="text"]::placeholder{
   padding: 5px 40px !important;
   margin-right: 3%;
 }
+
 #confirmEdit:hover {
   background-color: #ddfbd7;
 }
+
 #confirmEdit2 {
   font-family: "Noto Serif JP", serif;
   font-size: 19px;
@@ -398,6 +426,7 @@ input[type="text"]::placeholder{
   padding: 5px 40px !important;
   margin-right: 3%;
 }
+
 #confirmEdit2:hover {
   background-color: #ddfbd7;
 }
@@ -414,9 +443,11 @@ input[type="text"]::placeholder{
   padding: 5px 40px !important;
   margin-right: 3%;
 }
+
 #confirmAdd:hover {
   background-color: #98c5f3;
 }
+
 #confirmAdd2 {
   font-family: "Noto Serif JP", serif;
   font-size: 19px;
@@ -446,9 +477,11 @@ input[type="text"]::placeholder{
   padding: 5px 40px !important;
   margin-right: 3%;
 }
+
 #confirmDELE:hover {
   background-color: #ff8787 !important;
 }
+
 #confirmDELE2 {
   font-family: "Noto Serif JP", serif;
   font-size: 19px;
@@ -461,6 +494,7 @@ input[type="text"]::placeholder{
   padding: 5px 40px !important;
   margin-right: 3%;
 }
+
 #confirmDELE2:hover {
   background-color: #ff8787 !important;
 }
