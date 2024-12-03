@@ -88,13 +88,15 @@ window.addEventListener('click', function(event) {
 
 // ファイル選択後にファイル名を表示する関数
 function updateFileName() {
-    const fileInput = document.getElementById('fileInput');
-    const fileLabel = document.getElementById('fileLabel');
+    const fileInput = document.getElementById('fileInput'); // ファイル入力
+    const fileLabel = document.getElementById('fileLabel'); // ファイル名表示用のラベル
 
     // ファイルが選択されている場合
     if (fileInput.files.length > 0) {
         fileLabel.textContent = fileInput.files[0].name; // ファイル名を表示
+        fileLabel.style.color = "#221D7E"; // ファイル名の文字色を赤に設定
     } else {
         fileLabel.textContent = "ファイルを選択してください"; // 初期プレースホルダー
+        fileLabel.style.color = "#A9A8C2"; // 初期状態の色に戻す
     }
 }
