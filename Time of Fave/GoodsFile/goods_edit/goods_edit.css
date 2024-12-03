@@ -140,7 +140,7 @@ input[type="text"],
 input[type="date"],
 textarea.memo,
 .pl {
-  color: #A9A8C2;
+  color: #221D7E;
   font-family: "Noto Serif JP", serif;
   height: 40px;
   border-radius: 5px;
@@ -309,7 +309,7 @@ input[type="checkbox"] {
 
 select,
 .custom-file-select {
-  color: #A9A8C2;
+  color: #221D7E;
   appearance: none;
   font-family: "Noto Serif JP", serif;
   font-size: 20px;
@@ -320,6 +320,10 @@ select,
 
 option {
   font-family: "Noto Serif JP", serif;
+}
+
+#menu:has(option:checked[value=""]) {
+  color: #A9A8C2;
 }
 
 select {

@@ -285,14 +285,13 @@ input[type="datetime-local"] {
     border-radius: 5px; /* 角の丸み */
     padding: 10px 12px; /* 内側の余白 */
     font-size: 16px; /* 文字サイズ */
-    color: #A9A8C2; /* 文字色 */
     width: 100%; /* 幅を100%にする */
 }
 
 
 input[type="text"] {
     font-size: 18px;
-    color: #A9A8C2;
+    color: #221D7E;
     font-family: "Noto Serif JP", serif;
     height: 40px;
     width: 25rem;
@@ -312,7 +311,7 @@ input[type="text"]::placeholder {
 
 input[type="number"] {
     font-size: 18px;
-    color: #A9A8C2;
+    color: #221D7E;
     font-family: "Noto Serif JP", serif;
     height: 40px;
     width: 25rem;
@@ -335,7 +334,7 @@ option {
 }
 
 select {
-    color: #A9A8C2;
+    color: #221D7E;
     border-radius: 5px;
     appearance: none;
     width: 25rem;
@@ -357,6 +356,9 @@ select {
     background-color: #FFFFF3;
 }
 
+#menu:has(option:checked[value=""]) {
+    color: #A9A8C2;
+}
 
 .aaa {
     margin: 0 auto;

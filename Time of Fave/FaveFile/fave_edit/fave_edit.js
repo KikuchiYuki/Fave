@@ -136,17 +136,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // モーダルに関連する要素
     const modalGoods = document.getElementById('fave_add_modal');
-    const buttonConfirmAdd = document.getElementById('fadd'); 
-    const buttonCancelAdd = document.getElementById('fadd_can'); 
+    const buttonConfirmAdd = document.getElementById('fed'); 
+    const buttonCancelAdd = document.getElementById('fed_can'); 
 
     // モーダルの表示/非表示
-    document.getElementById('fadd_open').addEventListener('click', () => {
+    document.getElementById('fed_open').addEventListener('click', () => {
         modalGoods.style.display = 'block';
     });
     buttonCancelAdd.addEventListener('click', () => modalGoods.style.display = 'none');
 
     buttonConfirmAdd.addEventListener('click', () => {
-        window.location.href = '../fave/fave.html';
+        window.location.href = '../fave_detail/fave_detail.html';
     });
 
     window.addEventListener('click', (e) => {
@@ -165,6 +165,7 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
 }
 
+
 // ウィンドウの外をクリックしたらモーダルを閉じる
 window.onclick = function(event) {
     if (event.target.className === "modal") {
@@ -172,3 +173,37 @@ window.onclick = function(event) {
         closeModal("modalEvents");
     }
 };
+
+
+
+// ボタンとモーダルの取得
+const buttonOpen = document.getElementById('fe_dele');
+const modal = document.getElementById('favedeleModal');
+const buttonCancel = document.getElementById('fe_can_Delete');
+const buttonConfirmDelete = document.getElementById('fe_Delete');
+
+// モーダルを開くイベントリスナー
+buttonOpen.addEventListener('click', modalOpen);
+function modalOpen() {
+  modal.style.display = 'block';
+}
+
+// モーダルを閉じるイベントリスナー
+buttonCancel.addEventListener('click', modalClose);
+function modalClose() {
+  modal.style.display = 'none';
+}
+
+// 削除確定イベントリスナー
+buttonConfirmDelete.addEventListener('click', confirmDelete);
+function confirmDelete() {
+  // ページ遷移する
+  window.location.href = '../fave/fave.html';
+}
+
+// モーダル外をクリックしたときにモーダルを閉じる
+document.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    modalClose();
+  }
+});
